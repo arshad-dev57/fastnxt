@@ -273,7 +273,7 @@ export default function UsersDashboard() {
             <button
               type="button"
               onClick={() => router.push('/users/roles')}
-              className="w-full text-left bg-gradient-to-r from-[#014582]/5 to-blue-50 border border-[#014582]/20 rounded-xl px-5 py-3.5 flex items-center justify-between gap-3 hover:border-[#014582]/40 transition-colors group"
+              className="w-full text-left bg-gradient-to-r from-[#0f766e]/5 to-emerald-50/40 border border-slate-200 rounded-xl px-5 py-3.5 flex items-center justify-between gap-3 hover:border-[#0f766e]/40 transition-colors group"
             >
               <div className="flex items-center gap-3 min-w-0">
                 <div className="p-2 rounded-lg bg-[#014582]/10 shrink-0">

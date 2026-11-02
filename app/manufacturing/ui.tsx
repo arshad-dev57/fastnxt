@@ -50,7 +50,7 @@ export function MfgPageHeader({
   icon?: React.ReactNode;
 }) {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-[#00274d] via-[#014582] to-blue-700 rounded-2xl px-6 py-5 flex items-center justify-between mb-2 shadow-xl">
+    <div className="relative overflow-hidden bg-gradient-to-r from-[#131b22] via-[#1a252f] to-[#253542] border border-[#2d3f4e]/40 rounded-2xl px-6 py-5 flex items-center justify-between mb-2 shadow-xl text-white">
       <div className="absolute -right-10 -top-14 w-48 h-48 rounded-full bg-white/10 pointer-events-none" />
       <div className="flex items-center gap-3 relative min-w-0">
         {backHref && (

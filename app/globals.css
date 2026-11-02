@@ -138,6 +138,25 @@ body {
   --tw-gradient-from: rgba(15, 118, 110, 0.06) var(--tw-gradient-from-position) !important;
 }
 
+/* Module Hero Card Header Gradients (Accounting, Inventory, Purchases, Sales, etc.) */
+.from-\[\#00274d\],
+[class*="from-[#00274d]"] {
+  --tw-gradient-from: #131b22 var(--tw-gradient-from-position) !important;
+}
+.via-\[\#014582\],
+[class*="via-[#014582]"] {
+  --tw-gradient-via: #1a252f var(--tw-gradient-via-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #1a252f var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+}
+.to-blue-700,
+.to-blue-800,
+.to-blue-900,
+[class*="to-blue-700"],
+[class*="to-blue-800"],
+[class*="to-blue-900"] {
+  --tw-gradient-to: #253542 var(--tw-gradient-to-position) !important;
+}
+
 /* Standard Tailwind blues converted to mint/teal/charcoal */
 .bg-blue-50 {
   background-color: #edf7f5 !important;

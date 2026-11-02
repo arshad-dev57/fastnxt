@@ -95,7 +95,7 @@ export default function Customer360Page() {
       </div>
 
       {/* Customer 360 Header Profile Card */}
-      <div className="bg-gradient-to-r from-[#00274d] via-[#014582] to-blue-800 rounded-2xl p-6 text-white shadow-xl">
+      <div className="bg-gradient-to-r from-[#131b22] via-[#1a252f] to-[#253542] border border-[#2d3f4e]/40 rounded-2xl p-6 text-white shadow-xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1">

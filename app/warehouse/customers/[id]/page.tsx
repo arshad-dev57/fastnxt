@@ -565,7 +565,7 @@ export default function CustomerDetailPage() {
       </div>
 
       {/* Customer header */}
-      <div className="bg-gradient-to-r from-[#00274d] via-[#014582] to-blue-900 rounded-2xl p-6 text-white shadow-xl">
+      <div className="bg-gradient-to-r from-[#131b22] via-[#1a252f] to-[#253542] border border-[#2d3f4e]/40 rounded-2xl p-6 text-white shadow-xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="space-y-2">
             <div className="flex flex-wrap items-center gap-2">

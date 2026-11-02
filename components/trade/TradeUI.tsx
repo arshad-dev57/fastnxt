@@ -23,15 +23,15 @@ import {
 } from 'lucide-react';
 
 export const TRADE_COLORS = {
-  primary: '#014582',
-  primaryHover: '#01366a',
-  accent: '#0FA3E0',
+  primary: '#131b22',
+  primaryHover: '#1e293b',
+  accent: '#0f766e',
   success: '#10B981',
   warning: '#F59E0B',
   danger: '#EF4444',
   purple: '#8B5CF6',
   slate: '#64748B',
-  dark: '#0A2540',
+  dark: '#131b22',
 };
 
 export function TradePage({
@@ -142,7 +142,7 @@ export function TradePageHeader({
   const displayBadge = moduleName || badge;
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-[#00274d] via-[#014582] to-blue-700 rounded-2xl px-5 sm:px-6 py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2 shadow-xl text-white">
+    <div className="relative overflow-hidden bg-gradient-to-r from-[#131b22] via-[#1a252f] to-[#253542] border border-[#2d3f4e]/40 rounded-2xl px-5 sm:px-6 py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2 shadow-xl text-white">
       <div className="absolute -right-10 -top-14 w-48 h-48 rounded-full bg-white/10 pointer-events-none" />
       <div className="flex items-center gap-3 relative min-w-0">
         {backHref && (

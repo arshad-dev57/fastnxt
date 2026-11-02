@@ -251,7 +251,7 @@ export default function RolesManagementPage() {
 
         <div className="p-6 space-y-6">
           {/* How it works */}
-          <div className="bg-gradient-to-r from-[#00274d] via-[#014582] to-blue-700 rounded-xl p-5 text-white shadow-md">
+          <div className="bg-gradient-to-r from-[#131b22] via-[#1a252f] to-[#253542] border border-[#2d3f4e]/40 rounded-xl p-5 text-white shadow-md">
             <div className="flex items-center gap-2 mb-4">
               <Info className="w-4 h-4 text-blue-300 shrink-0" />
               <p className="font-bold text-sm">How Role-Based Access Works</p>

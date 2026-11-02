@@ -23,7 +23,7 @@ export default function DashboardHeroBanner({
   children,
 }: DashboardHeroBannerProps) {
   return (
-    <div className="bg-gradient-to-r from-[#00274d] via-[#014582] to-blue-700 rounded-2xl p-6 text-white shadow-xl flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div className="bg-gradient-to-r from-[#131b22] via-[#1a252f] to-[#253542] border border-[#2d3f4e]/40 rounded-2xl p-6 text-white shadow-xl flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div className="min-w-0">
         <div className="flex flex-wrap items-center gap-2 mb-1">
           {badge ? (
@@ -51,7 +51,7 @@ export function heroChipClass(active: boolean) {
   return [
     'px-3.5 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-60 disabled:cursor-not-allowed',
     active
-      ? 'bg-white text-[#014582] shadow-md'
+      ? 'bg-white text-[#131b22] font-semibold shadow-md'
       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20',
   ].join(' ');
 }

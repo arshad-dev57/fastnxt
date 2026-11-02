@@ -180,7 +180,7 @@ export default function CompanyProfilePage() {
               <div className="space-y-6">
                 {/* Profile cover + identity */}
                 <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-                  <div className="h-32 bg-gradient-to-br from-[#00274d] via-[#014582] to-blue-700 sm:h-40" />
+                  <div className="h-32 bg-gradient-to-br from-[#131b22] via-[#1a252f] to-[#253542] sm:h-40" />
                   <div className="relative px-5 pb-6 sm:px-8">
                     <div className="-mt-12 flex flex-col gap-4 sm:-mt-14 sm:flex-row sm:items-end sm:justify-between">
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-end">

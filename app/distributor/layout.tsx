@@ -53,7 +53,7 @@ export default function DistributorLayout({ children }: { children: React.ReactN
     <div className="min-h-screen bg-gray-50">
       <CollapsibleSidebar expandedClassName="w-64" expandedWidth={256}>
         <div className={`flex items-center border-b border-white/10 ${collapsed ? 'justify-center p-3' : 'gap-3 p-5'}`}>
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#014582] to-blue-500 flex items-center justify-center shadow-lg shadow-blue-500/20 flex-shrink-0">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#131b22] to-[#0f766e] flex items-center justify-center shadow-lg shadow-black/20 flex-shrink-0">
             <Truck className="w-5 h-5 text-white" />
           </div>
           {!collapsed && (
