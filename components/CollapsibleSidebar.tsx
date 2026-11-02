@@ -29,7 +29,7 @@ export function CollapsibleSidebar({
   fixed = true,
   fullHeight = true,
   className = '',
-  bgClassName = 'bg-[#00274d]',
+  bgClassName = 'bg-[#eaf2ee]',
 }: CollapsibleSidebarProps) {
   const { collapsed, toggle } = useSidebarCollapsed();
   useSidebarWidthVar(expandedWidth);

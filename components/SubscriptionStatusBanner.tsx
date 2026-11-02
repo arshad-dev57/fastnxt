@@ -10,7 +10,7 @@ import {
 import { usePermissions } from '../lib/usePermissions';
 import { SUBSCRIPTION_PURCHASE_UI_ENABLED } from '../lib/subscription-ui';
 
-const BRAND = '#014582';
+const BRAND = '#131b22';
 
 function planLabel(plan: string) {
   const p = (plan || 'none').toLowerCase();

@@ -217,7 +217,7 @@ function HeroArt() {
       {/* Revenue chart card */}
       <div className={`ah-float-1 absolute bottom-[6%] right-[4%] hidden w-60 rounded-2xl p-5 xl:block ${glass}`}>
         {/* Growth pill — chart ke corner par laga hua */}
-        <div className="ah-pop absolute -left-8 -top-3 flex items-center gap-1.5 rounded-full border border-white/30 bg-blue-700/80 px-3 py-1.5 text-xs font-bold text-white shadow-lg backdrop-blur-sm">
+        <div className="ah-pop absolute -left-8 -top-3 flex items-center gap-1.5 rounded-full border border-white/30 bg-[#131b22]/90 px-3 py-1.5 text-xs font-bold text-white shadow-lg backdrop-blur-sm">
           <TrendingUp className="h-3.5 w-3.5 text-emerald-300" />
           +24.5%
         </div>
@@ -314,7 +314,7 @@ export default function AuthSplitLayout({ title, subtitle, children }: Props) {
         className="relative hidden lg:flex lg:w-1/2 lg:sticky lg:top-0 lg:h-screen flex-col justify-center overflow-hidden px-20"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px), linear-gradient(to bottom right, #2563eb, #1e40af)',
+            'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(to bottom right, #131b22, #1e293b)',
           backgroundSize: '64px 64px, 64px 64px, 100% 100%',
         }}
       >
@@ -328,7 +328,7 @@ export default function AuthSplitLayout({ title, subtitle, children }: Props) {
             <RocketBeside />
           </div>
 
-          {subtitle && <p className="text-base text-blue-100 max-w-md mb-12">{subtitle}</p>}
+          {subtitle && <p className="text-base text-slate-300 max-w-md mb-12">{subtitle}</p>}
 
           <div>
             {/* Marketing site ka link — zaroorat ho to href change kar lo */}

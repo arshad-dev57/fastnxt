@@ -1,36 +1,270 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #014582;
-  --color-primary-hover: #01366a;
+  /* Image Theme Color Palette */
+  --color-primary: #131b22;              /* Deep charcoal/graphite active pill & primary button */
+  --color-primary-hover: #1f2937;
+  --color-accent-teal: #0f766e;           /* Elegant dark teal / mint accent */
+  --color-accent-teal-hover: #115e59;
+  --color-canvas: #edf4f1;               /* Soft pastel sage/mint canvas */
+  --color-sidebar: #eaf2ee;              /* Soft sage/mint sidebar */
+
+  /* Pastel Card Colors (from Reference Image) */
+  --pastel-lime: #dcf89d;                /* Lime green summary card */
+  --pastel-lime-dark: #1e3a1f;
+  --pastel-mint: #9ee6e6;                /* Aqua/Mint summary card */
+  --pastel-mint-dark: #134e4a;
+  --pastel-coral: #fba4a4;               /* Coral/Salmon pink summary card */
+  --pastel-coral-dark: #881337;
+
   --app-sidebar-width: 16rem;
 }
 
-/* App-wide square grid (dashboard / login-style). Applied via SidebarMain — not auth screens. */
-.app-square-grid {
-  background-color: #f3f4f6;
-  background-image:
-    linear-gradient(rgba(1, 69, 130, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(1, 69, 130, 0.07) 1px, transparent 1px);
-  background-size: 64px 64px;
+/* Base Body: Soft serene sage-mint canvas inspired by the reference image */
+body {
+  background-color: #edf4f1;
+  color: #0f172a;
 }
 
-/* Custom Scrollbar for Accounting Sidebar */
+/* App-wide canvas background (replaces sterile cold gray + blue grid) */
+.app-square-grid,
+.app-square-grid.bg-gray-50,
+.app-square-grid.bg-white {
+  background-color: #edf4f1 !important;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(158, 230, 230, 0.14) 0%, transparent 45%),
+    linear-gradient(rgba(15, 118, 110, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.025) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 56px 56px, 56px 56px !important;
+}
+
+/* Custom Scrollbar matching modern sage aesthetic */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(15, 118, 110, 0.04);
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 3px;
+  background: rgba(15, 118, 110, 0.22);
+  border-radius: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(15, 118, 110, 0.38);
+}
+
+/* ==========================================================================
+   GLOBAL BLUE -> REFERENCE PALETTE OVERRIDES
+   ========================================================================== */
+
+/* Primary brand background: Deep dark charcoal pill/button (like 'My Activity' in image) */
+.bg-\[\#014582\],
+[class~="bg-[#014582]"],
+.bg-\[\#00274d\],
+.bg-\[\#091746\],
+.bg-\[\#0A2540\] {
+  background-color: #131b22 !important;
+  color: #ffffff !important;
+}
+
+/* Hover on primary button */
+.hover\:bg-\[\#014582\]:hover,
+.hover\:bg-\[\#01366a\]:hover,
+[class*="hover:bg-[#014582]"]:hover,
+[class*="hover:bg-[#01366a]"]:hover {
+  background-color: #1e293b !important;
+}
+
+/* Primary text & icon accents */
+.text-\[\#014582\],
+[class~="text-[#014582]"] {
+  color: #0f172a !important;
+}
+
+/* Primary borders */
+.border-\[\#014582\],
+[class~="border-[#014582]"] {
+  border-color: #131b22 !important;
+}
+
+/* Soft accent background tints (badges, soft pill highlights) -> Soft mint / sage tint */
+.bg-\[\#014582\]\/10,
+[class*="bg-[#014582]/10"] {
+  background-color: rgba(15, 118, 110, 0.09) !important;
+  color: #0f766e !important;
+}
+
+.bg-\[\#014582\]\/5,
+[class*="bg-[#014582]/5"] {
+  background-color: rgba(15, 118, 110, 0.04) !important;
+}
+
+.bg-\[\#014582\]\/20,
+[class*="bg-[#014582]/20"] {
+  background-color: rgba(15, 118, 110, 0.16) !important;
+}
+
+.border-\[\#014582\]\/10,
+.border-\[\#014582\]\/20,
+.border-\[\#014582\]\/30,
+[class*="border-[#014582]/"] {
+  border-color: rgba(15, 118, 110, 0.22) !important;
+}
+
+/* Shadows */
+.shadow-\[\#014582\]\/30,
+[class*="shadow-[#014582]"] {
+  --tw-shadow-color: rgba(19, 27, 34, 0.18) !important;
+}
+
+/* Focus rings */
+.focus\:ring-\[\#014582\]:focus,
+[class*="focus:ring-[#014582]"]:focus {
+  --tw-ring-color: rgba(15, 118, 110, 0.35) !important;
+  border-color: #0f766e !important;
+}
+
+.focus\:border-\[\#014582\]:focus,
+[class*="focus:border-[#014582]"]:focus {
+  border-color: #0f766e !important;
+}
+
+/* Blue gradients */
+.from-\[\#014582\]\/5,
+[class*="from-[#014582]/5"] {
+  --tw-gradient-from: rgba(15, 118, 110, 0.06) var(--tw-gradient-from-position) !important;
+}
+
+/* Standard Tailwind blues converted to mint/teal/charcoal */
+.bg-blue-50 {
+  background-color: #edf7f5 !important;
+}
+.bg-blue-100 {
+  background-color: #daf2ec !important;
+}
+.bg-blue-600,
+.bg-blue-700 {
+  background-color: #131b22 !important;
+}
+.hover\:bg-blue-700:hover {
+  background-color: #1e293b !important;
+}
+.text-blue-600,
+.text-blue-700 {
+  color: #0f766e !important;
+}
+.text-blue-500 {
+  color: #0d9488 !important;
+}
+.border-blue-200,
+.border-blue-300 {
+  border-color: #cce7e0 !important;
+}
+
+/* ==========================================================================
+   SIDEBAR THEME (from Reference Image: Light Mint/Sage Canvas with Charcoal Active Pill)
+   ========================================================================== */
+
+[data-app-sidebar] {
+  background-color: #eaf2ee !important;
+  color: #334155 !important;
+  border-right: 1px solid #d8e5e0 !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Sidebar divider lines */
+[data-app-sidebar] .border-white\/10 {
+  border-color: #d8e5e0 !important;
+}
+
+/* Sidebar section headers (e.g. Menu, Leads, Accounting Navigation) */
+[data-app-sidebar] p.text-white\/30,
+[data-app-sidebar] p[class*="text-white\/30"],
+[data-app-sidebar] p[class*="tracking-wider"] {
+  color: #475569 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Inactive nav rows */
+[data-app-sidebar] a.text-white\/70,
+[data-app-sidebar] button.text-white\/70,
+[data-app-sidebar] a.text-white\/60,
+[data-app-sidebar] button.text-white\/60 {
+  color: #475569 !important;
+}
+
+[data-app-sidebar] a.text-white\/90,
+[data-app-sidebar] button.text-white\/90 {
+  color: #1e293b !important;
+}
+
+[data-app-sidebar] a.hover\:bg-white\/5:hover,
+[data-app-sidebar] button.hover\:bg-white\/5:hover,
+[data-app-sidebar] a.hover\:bg-white\/10:hover,
+[data-app-sidebar] button.hover\:bg-white\/10:hover {
+  background-color: #dbe8e3 !important;
+  color: #0f172a !important;
+}
+
+/* Chevron icons */
+[data-app-sidebar] .lucide-chevron-down,
+[data-app-sidebar] .lucide-chevron-right {
+  color: #64748b !important;
+}
+
+/* ACTIVE NAV PILL: Sleek dark charcoal rounded pill like 'My Activity' in image */
+[data-app-sidebar] a[class*="bg-[#014582]"],
+[data-app-sidebar] button[class*="bg-[#014582]"],
+[data-app-sidebar] [data-nav-active="true"] {
+  background-color: #131b22 !important;
+  color: #ffffff !important;
+  border-radius: 1rem !important; /* rounded-2xl */
+  box-shadow: 0 4px 12px rgba(19, 27, 34, 0.2) !important;
+}
+
+[data-app-sidebar] a[class*="bg-[#014582]"] *,
+[data-app-sidebar] button[class*="bg-[#014582]"] *,
+[data-app-sidebar] [data-nav-active="true"] * {
+  color: #ffffff !important;
+}
+
+/* Brand header in sidebar */
+[data-app-sidebar] p.font-extrabold.text-white,
+[data-app-sidebar] p.text-white {
+  color: #0f172a !important;
+}
+[data-app-sidebar] p.text-white\/50 {
+  color: #64748b !important;
+}
+
+/* Help Box in sidebar */
+[data-app-sidebar] .sidebar-help {
+  background-color: #ffffff !important;
+  border: 1px solid #d8e5e0 !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+[data-app-sidebar] .sidebar-help p.font-semibold {
+  color: #0f172a !important;
+}
+[data-app-sidebar] .sidebar-help p.text-xs {
+  color: #64748b !important;
+}
+[data-app-sidebar] .sidebar-help svg {
+  color: #0f766e !important;
+}
+
+/* Sidebar Toggle Collapse Button */
+[data-app-sidebar] [data-sidebar-toggle] {
+  color: #64748b !important;
+}
+[data-app-sidebar] [data-sidebar-toggle]:hover {
+  background-color: #dbe8e3 !important;
+  color: #0f172a !important;
 }
 
 /* ── Collapsed sidebar: icons only ───────────────────────── */

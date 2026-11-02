@@ -31,7 +31,7 @@ import {
 import { formatUsd } from '../../lib/subscription-pricing';
 import { SUBSCRIPTION_PURCHASE_UI_ENABLED } from '../../lib/subscription-ui';
 
-const BRAND = '#014582';
+const BRAND = '#131b22';
 
 type Tab = 'overview' | 'invoices';
 

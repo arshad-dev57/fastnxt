@@ -260,7 +260,7 @@ const PLAN_COLUMNS = [
   { id: 'custom', name: 'Custom', price: 'Let’s talk' },
 ] as const;
 
-const BRAND = '#014582';
+const BRAND = '#131b22';
 const BRAND_SOFT = 'rgba(1, 69, 130, 0.10)';
 const BRAND_BORDER = 'rgba(1, 69, 130, 0.22)';
 

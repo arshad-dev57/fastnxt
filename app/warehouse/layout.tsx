@@ -225,7 +225,7 @@ export default function WarehouseLayout({
 
             <div className="w-px h-6 bg-gray-200" />
 
-            <ProfileDropdown accentClassName="bg-[#014582]" />
+            <ProfileDropdown accentClassName="bg-[#131b22]" />
           </div>
         </header>
 

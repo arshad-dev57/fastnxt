@@ -17,7 +17,7 @@ import {
 } from '../../lib/subscription-service';
 import type { SubscriptionCapacity } from '../../lib/subscription-pricing';
 
-const BRAND = '#014582';
+const BRAND = '#131b22';
 
 type Props = {
   processing: boolean;

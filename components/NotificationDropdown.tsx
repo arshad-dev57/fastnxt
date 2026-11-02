@@ -74,7 +74,7 @@ function typeColor(type?: string) {
   if (t === 'success') return 'text-emerald-600 bg-emerald-50';
   if (t === 'warning' || t === 'action') return 'text-amber-600 bg-amber-50';
   if (t === 'error') return 'text-red-600 bg-red-50';
-  return 'text-[#014582] bg-[#014582]/10';
+  return 'text-[#0f766e] bg-[#0f766e]/10';
 }
 
 function notificationLink(n: AppNotification): string | null {
@@ -220,7 +220,7 @@ export default function NotificationDropdown({ className = '' }: Props) {
         title="Notifications"
         className={`relative flex items-center justify-center rounded-lg p-2 transition-all ${
           open
-            ? 'bg-[#014582]/10 text-[#014582]'
+            ? 'bg-[#0f766e]/10 text-[#0f766e]'
             : 'text-gray-600 hover:bg-gray-100 hover:text-gray-800'
         }`}
       >
@@ -250,7 +250,7 @@ export default function NotificationDropdown({ className = '' }: Props) {
               type="button"
               disabled={unread === 0 || markingAll}
               onClick={() => void markAllRead()}
-              className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-[#014582] hover:bg-[#014582]/10 disabled:cursor-default disabled:opacity-40"
+              className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-semibold text-[#0f766e] hover:bg-[#0f766e]/10 disabled:cursor-default disabled:opacity-40"
             >
               {markingAll ? (
                 <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -295,7 +295,7 @@ export default function NotificationDropdown({ className = '' }: Props) {
                   <div
                     key={n.id}
                     className={`group flex gap-3 border-b border-gray-50 px-4 py-3 last:border-b-0 ${
-                      n.isRead ? 'bg-white' : 'bg-[#014582]/5'
+                      n.isRead ? 'bg-white' : 'bg-[#0f766e]/5'
                     }`}
                   >
                     <div
@@ -317,7 +317,7 @@ export default function NotificationDropdown({ className = '' }: Props) {
                           {n.title}
                         </p>
                         {!n.isRead ? (
-                          <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#014582]" />
+                          <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#0f766e]" />
                         ) : null}
                       </div>
                       {n.message ? (
@@ -330,7 +330,7 @@ export default function NotificationDropdown({ className = '' }: Props) {
                           </span>
                         ) : null}
                         <span>{timeAgo(n.createdAt)}</span>
-                        {link ? <span className="text-[#014582]">Open →</span> : null}
+                        {link ? <span className="text-[#0f766e]">Open →</span> : null}
                       </div>
                     </button>
                     <button

@@ -445,7 +445,7 @@ export default function AccountingLayout({
 
             <div className="w-px h-6 bg-gray-200" />
 
-            <ProfileDropdown accentClassName="bg-[#091746]" />
+            <ProfileDropdown accentClassName="bg-[#131b22]" />
           </div>
         </header>
 

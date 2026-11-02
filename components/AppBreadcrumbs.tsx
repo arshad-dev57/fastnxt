@@ -207,7 +207,7 @@ export default function AppBreadcrumbs({
             <li key={`${crumb.label}-${i}`} className="flex items-center gap-1 min-w-0">
               {i === 0 && (
                 <Home
-                  className={`w-3.5 h-3.5 flex-shrink-0 ${dark ? 'text-white/70' : 'text-[#014582]'}`}
+                  className={`w-3.5 h-3.5 flex-shrink-0 ${dark ? 'text-white/70' : 'text-[#0f766e]'}`}
                 />
               )}
               {i > 0 && (
@@ -219,7 +219,7 @@ export default function AppBreadcrumbs({
                 <Link
                   href={crumb.href}
                   className={`truncate font-medium hover:underline ${
-                    dark ? 'text-white/80 hover:text-white' : 'text-[#014582] hover:text-[#01366a]'
+                    dark ? 'text-white/80 hover:text-white' : 'text-[#0f766e] hover:text-[#115e59]'
                   }`}
                 >
                   {crumb.label}

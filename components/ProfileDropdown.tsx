@@ -127,7 +127,7 @@ type Props = {
 
 export default function ProfileDropdown({
   variant = 'light',
-  accentClassName = 'bg-[#014582]',
+  accentClassName = 'bg-[#131b22]',
 }: Props) {
   const { user } = usePermissions();
   const companyCtx = useCompanyOptional();
@@ -385,7 +385,7 @@ export default function ProfileDropdown({
   const text = isDark ? 'text-white' : 'text-gray-900';
   const inputCls = isDark
     ? 'w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-[#f59e0b]'
-    : 'w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:border-[#014582]';
+    : 'w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:border-[#131b22] focus:ring-1 focus:ring-[#131b22]';
   const labelCls = `text-[11px] mb-1 block ${muted}`;
 
   return (

@@ -4,7 +4,7 @@ import { X, Printer } from 'lucide-react';
 import { formatUsd, PRICING } from '../lib/subscription-pricing';
 import type { BillingInvoice, CompanyBilling } from '../lib/subscription-service';
 
-const BRAND = '#014582';
+const BRAND = '#131b22';
 
 type Props = {
   invoice: BillingInvoice;

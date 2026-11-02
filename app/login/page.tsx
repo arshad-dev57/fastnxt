@@ -419,7 +419,7 @@ function LoginForm() {
         className="relative hidden lg:flex lg:w-1/2 flex-col justify-center overflow-hidden px-20"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px), linear-gradient(to bottom right, #2563eb, #1e40af)',
+            'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(to bottom right, #131b22, #1e293b)',
           backgroundSize: '64px 64px, 64px 64px, 100% 100%',
         }}
       >
@@ -540,7 +540,7 @@ function LoginForm() {
                   disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2
                   ${
                     filled
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/30'
+                      ? 'bg-[#131b22] hover:bg-[#1e293b] text-white shadow-lg shadow-black/20'
                       : 'bg-gray-200 text-gray-400'
                   }`}
               >

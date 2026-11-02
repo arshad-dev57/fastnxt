@@ -260,7 +260,7 @@ export default function GlobalSearch({ className = '' }: { className?: string })
         title="Search pages (⌘K)"
         className={`flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm transition-all ${
           open
-            ? 'bg-[#014582]/10 text-[#014582]'
+            ? 'bg-[#0f766e]/10 text-[#0f766e]'
             : 'text-gray-600 hover:bg-gray-100 hover:text-gray-800'
         }`}
       >
@@ -322,7 +322,7 @@ export default function GlobalSearch({ className = '' }: { className?: string })
                     key={link.key}
                     href={link.href}
                     onClick={close}
-                    className="rounded-lg border border-gray-200 px-2.5 py-1 text-xs font-medium text-gray-600 transition-colors hover:border-[#014582]/30 hover:bg-[#014582]/5 hover:text-[#014582]"
+                    className="rounded-lg border border-gray-200 px-2.5 py-1 text-xs font-medium text-gray-600 transition-colors hover:border-[#0f766e]/30 hover:bg-[#0f766e]/5 hover:text-[#0f766e]"
                   >
                     {link.label}
                   </Link>
@@ -356,13 +356,13 @@ export default function GlobalSearch({ className = '' }: { className?: string })
                         onMouseEnter={() => setActiveIndex(flatIndex)}
                         className={`flex items-center gap-2.5 px-3 py-2 text-sm transition-colors ${
                           active
-                            ? 'bg-[#014582]/5 text-[#01366a]'
+                            ? 'bg-[#0f766e]/10 text-[#0f766e]'
                             : 'text-gray-700 hover:bg-gray-50'
                         }`}
                       >
                         <Icon
                           className={`h-4 w-4 flex-shrink-0 ${
-                            active ? 'text-[#014582]' : 'text-gray-400'
+                            active ? 'text-[#0f766e]' : 'text-gray-400'
                           }`}
                         />
                         <span className="min-w-0 flex-1 truncate">
@@ -371,7 +371,7 @@ export default function GlobalSearch({ className = '' }: { className?: string })
                               part.match ? (
                                 <span
                                   key={partIndex}
-                                  className="font-semibold text-[#014582]"
+                                  className="font-semibold text-[#0f766e]"
                                 >
                                   {part.text}
                                 </span>

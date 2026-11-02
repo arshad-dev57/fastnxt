@@ -9,7 +9,7 @@ import {
 } from '../lib/company-context';
 import { loadUserFromLocal, isAdminRole } from '../lib/permission-service';
 
-const BRAND = '#014582';
+const BRAND = '#131b22';
 
 export default function CompanySwitcher({
   compact = false,

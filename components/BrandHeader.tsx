@@ -157,7 +157,7 @@ function CompanyLogo({
 
   if (!showImg) {
     return (
-      <span className="flex h-full w-full items-center justify-center bg-[#014582] text-xs font-bold text-white">
+      <span className="flex h-full w-full items-center justify-center bg-[#131b22] text-xs font-bold text-white">
         {initials(name || alt)}
       </span>
     );

@@ -28,7 +28,7 @@ import {
   type CompanySummary,
 } from '../../lib/company-context';
 
-const BRAND = '#014582';
+const BRAND = '#131b22';
 
 const EMPTY_FORM = {
   name: '',

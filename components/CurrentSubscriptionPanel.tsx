@@ -8,7 +8,7 @@ import {
   type SubscriptionCapacity,
 } from '../lib/subscription-pricing';
 
-const BRAND = '#014582';
+const BRAND = '#131b22';
 const BRAND_SOFT = 'rgba(1, 69, 130, 0.08)';
 const BRAND_BORDER = 'rgba(1, 69, 130, 0.22)';
 

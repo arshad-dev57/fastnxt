@@ -201,8 +201,8 @@ export function MainHubSidebar({ activePath = '/dashboard' }: { activePath?: str
 
       <div className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
         {!collapsed && (
-          <p className="px-2 text-[10px] font-semibold text-white/30 tracking-wider mb-3 sidebar-expanded-only">
-            MAIN MENU
+          <p className="px-3 text-[11px] font-bold text-slate-500 tracking-wider mb-3 sidebar-expanded-only uppercase">
+            Main Menu
           </p>
         )}
 
@@ -219,19 +219,19 @@ export function MainHubSidebar({ activePath = '/dashboard' }: { activePath?: str
               onClick={() => {
                 window.location.href = item.path;
               }}
-              className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg transition-all duration-200
+              className={`w-full flex items-center justify-between px-3.5 py-2.5 transition-all duration-200
                 ${
                   isActive
-                    ? 'bg-[#014582] text-white shadow-md shadow-[#014582]/30'
-                    : 'text-white/60 hover:text-white hover:bg-white/5'
+                    ? 'bg-[#131b22] text-white shadow-sm font-semibold rounded-2xl'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-[#dbe8e3] rounded-xl font-medium'
                 }`}
             >
               <div className="flex items-center gap-3">
-                <span className={isActive ? 'text-white' : 'text-white/40'}>{item.icon}</span>
-                <span className="text-sm font-medium sidebar-expanded-only">{item.label}</span>
+                <span className={isActive ? 'text-white' : 'text-slate-500'}>{item.icon}</span>
+                <span className="text-sm sidebar-expanded-only">{item.label}</span>
               </div>
               {isActive && !collapsed && (
-                <ChevronRight className="w-4 h-4 text-white sidebar-expanded-only" />
+                <ChevronRight className="w-4 h-4 text-white/80 sidebar-expanded-only" />
               )}
             </button>
           );
@@ -240,23 +240,63 @@ export function MainHubSidebar({ activePath = '/dashboard' }: { activePath?: str
 
       <div className="px-3 pb-4">
         {!collapsed && (
-          <div className="p-4 bg-[#014582]/10 rounded-xl border border-[#014582]/20 sidebar-help sidebar-expanded-only">
-            <HelpCircle className="w-5 h-5 text-white mb-2" />
-            <p className="text-sm font-semibold text-white">Need Help?</p>
-            <p className="text-xs text-white/50 mt-1 mb-3">
-              Contact info@bisonstechs.com
-            </p>
+          <div className="p-3.5 bg-white/90 rounded-2xl border border-[#d8e5e0] shadow-sm sidebar-help sidebar-expanded-only space-y-3">
+            {/* Circular utility dock icons like the reference image */}
+            <div className="flex items-center justify-between px-1">
+              <button
+                type="button"
+                title="Support"
+                onClick={() => { window.location.href = '/support'; }}
+                className="w-7 h-7 rounded-full bg-slate-100 hover:bg-[#dcf89d] text-slate-600 hover:text-[#1e3a1f] flex items-center justify-center transition-colors shadow-2xs"
+              >
+                <HelpCircle className="w-3.5 h-3.5" />
+              </button>
+              <div className="relative">
+                <div className="w-7 h-7 rounded-full bg-slate-100 hover:bg-[#9ee6e6] text-slate-600 hover:text-[#134e4a] flex items-center justify-center transition-colors shadow-2xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 absolute top-1 right-1" />
+                  <Receipt className="w-3.5 h-3.5" />
+                </div>
+              </div>
+              <button
+                type="button"
+                title="Account Settings"
+                onClick={() => { window.location.href = '/accounting/settings'; }}
+                className="w-7 h-7 rounded-full bg-slate-100 hover:bg-[#fba4a4] text-slate-600 hover:text-[#881337] flex items-center justify-center transition-colors shadow-2xs"
+              >
+                <Building2 className="w-3.5 h-3.5" />
+              </button>
+              <button
+                type="button"
+                title="Logout"
+                onClick={() => performLogout()}
+                className="w-7 h-7 rounded-full bg-slate-100 hover:bg-red-50 text-slate-500 hover:text-red-600 flex items-center justify-center transition-colors shadow-2xs"
+              >
+                <LogOut className="w-3.5 h-3.5" />
+              </button>
+            </div>
+
+            {/* User Profile snippet like bottom of reference image */}
+            <div className="pt-2 border-t border-slate-100 flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-full bg-[#131b22] text-white text-xs font-bold flex items-center justify-center shrink-0">
+                FN
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="text-xs font-bold text-slate-800 truncate">FastNxt Admin</p>
+                <p className="text-[10px] text-slate-400 truncate">business@fastnxt.com</p>
+              </div>
+            </div>
           </div>
         )}
-        <button
-          type="button"
-          title="Logout"
-          onClick={() => performLogout()}
-          className="mt-3 w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/50 hover:text-white hover:bg-white/5 transition-all"
-        >
-          <LogOut className="w-4 h-4" />
-          <span className="text-sm sidebar-expanded-only">Logout</span>
-        </button>
+        {collapsed && (
+          <button
+            type="button"
+            title="Logout"
+            onClick={() => performLogout()}
+            className="w-full flex items-center justify-center p-2 rounded-xl text-slate-500 hover:text-red-600 hover:bg-red-50 transition-all"
+          >
+            <LogOut className="w-4 h-4" />
+          </button>
+        )}
       </div>
     </CollapsibleSidebar>
   );
