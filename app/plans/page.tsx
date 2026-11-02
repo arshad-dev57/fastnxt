@@ -31,7 +31,7 @@ import {
   type SubscriptionCapacity,
 } from '../../lib/subscription-pricing';
 
-const CUSTOM_CONTACT_EMAIL = 'info@bisonstechs.com';
+const CUSTOM_CONTACT_EMAIL = 'info@fastnxt.com';
 const CUSTOM_CONTACT_PHONE = '+92 325 3411482';
 const CUSTOM_CONTACT_PHONE_TEL = '+923253411482';
 
@@ -437,17 +437,17 @@ export default function PlansPage() {
           <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
             <div className="flex items-center gap-3">
               <Image
-                src="/bisontechs.png"
-                alt="Bisonstechs"
+                src="/fastnxt-logo.png"
+                alt="FastNxt"
                 width={32}
                 height={32}
                 className="rounded"
               />
               <div>
                 <p className="text-sm font-semibold tracking-tight" style={{ color: BRAND }}>
-                  Bisonstechs
+                  FastNxt
                 </p>
-                <p className="text-xs text-neutral-500">ERP Suite</p>
+                <p className="text-xs text-neutral-500">COMPLETE BUSINESS MANAGEMENT APP</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -494,8 +494,8 @@ export default function PlansPage() {
                 : trialEligible
                   ? `Full ERP + POS access for ${TRIAL_DAYS} days. No credit card required.`
                   : isAdmin
-                    ? 'Online purchase is temporarily unavailable. Contact Bisonstechs support to activate or renew your subscription.'
-                    : "Your company's subscription has expired. Please ask your administrator to contact Bisonstechs support."}
+                    ? 'Online purchase is temporarily unavailable. Contact FastNxt support to activate or renew your subscription.'
+                    : "Your company's subscription has expired. Please ask your administrator to contact FastNxt support."}
           </p>
           {error && (
             <p className="mt-4 text-sm text-red-600" role="alert">
@@ -568,17 +568,17 @@ export default function PlansPage() {
           <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
             <div className="flex items-center gap-3">
               <Image
-                src="/bisontechs.png"
-                alt="Bisonstechs"
+                src="/fastnxt-logo.png"
+                alt="FastNxt"
                 width={32}
                 height={32}
                 className="rounded"
               />
               <div>
                 <p className="text-sm font-semibold tracking-tight" style={{ color: BRAND }}>
-                  Bisonstechs
+                  FastNxt
                 </p>
-                <p className="text-xs text-neutral-500">ERP Suite</p>
+                <p className="text-xs text-neutral-500">COMPLETE BUSINESS MANAGEMENT APP</p>
               </div>
             </div>
             <button
@@ -615,17 +615,17 @@ export default function PlansPage() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
           <div className="flex items-center gap-3">
             <Image
-              src="/bisontechs.png"
-              alt="Bisonstechs"
+              src="/fastnxt-logo.png"
+              alt="FastNxt"
               width={32}
               height={32}
               className="rounded"
             />
             <div>
               <p className="text-sm font-semibold tracking-tight" style={{ color: BRAND }}>
-                Bisonstechs
+                FastNxt
               </p>
-              <p className="text-xs text-neutral-500">ERP Suite</p>
+              <p className="text-xs text-neutral-500">COMPLETE BUSINESS MANAGEMENT APP</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -663,7 +663,7 @@ export default function PlansPage() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-              <span style={{ color: BRAND }}>Bisonstechs</span>
+              <span style={{ color: BRAND }}>FastNxt</span>
               <br />
               <span className="text-neutral-400">Plans and Pricing</span>
             </h1>
@@ -904,7 +904,7 @@ export default function PlansPage() {
             Compare Plans
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-neutral-500">
-            Everything you can run in the Bisonstechs ERP — accounting, sales, purchases,
+            Everything you can run in the FastNxt ERP — accounting, sales, purchases,
             warehouse, POS, reports and support — by plan.
           </p>
 

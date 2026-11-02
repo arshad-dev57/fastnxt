@@ -10,8 +10,9 @@ import {
 import { useCompanyOptional } from '../lib/company-context';
 import { useSidebarCollapsed } from '../lib/sidebar-collapse';
 
-export const APP_NAME = 'Bisonstechs';
-export const APP_LOGO_FALLBACK = '/bisontechs.png';
+export const APP_NAME = 'FastNxt';
+export const APP_LOGO_FALLBACK = '/fastnxt-logo.png';
+export const APP_TAGLINE = 'COMPLETE BUSINESS MANAGEMENT APP';
 
 const PROFILE_CACHE_KEY = 'bisonstechs_company_branding';
 const MODULE_SELECTION_HREF = '/dashboard';
@@ -201,7 +202,7 @@ export function BrandHeader({
         <div className="min-w-0 sidebar-expanded-only">
           <p className="text-sm font-extrabold tracking-wide text-white truncate">{brandName}</p>
           <p className="text-[11px] text-white/50 truncate">
-            {subtitle || 'Business Suite'}
+            {subtitle || APP_TAGLINE}
           </p>
         </div>
       )}

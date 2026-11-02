@@ -165,7 +165,7 @@ export function TradePageHeader({
               <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/20 uppercase tracking-wider">
                 {displayBadge}
               </span>
-              <span className="text-xs text-white/70">Bisonstechs Enterprise Suite</span>
+              <span className="text-xs text-white/70">FastNxt Enterprise Suite</span>
             </div>
           )}
           <h1 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-snug truncate">

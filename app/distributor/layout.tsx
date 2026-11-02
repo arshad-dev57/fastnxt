@@ -59,7 +59,7 @@ export default function DistributorLayout({ children }: { children: React.ReactN
           {!collapsed && (
             <div className="sidebar-expanded-only">
               <h1 className="font-bold text-white tracking-wide text-sm">DISTRIBUTOR HUB</h1>
-              <p className="text-[11px] text-white/50 font-medium">Bisonstechs ERP</p>
+              <p className="text-[11px] text-white/50 font-medium">FastNxt ERP</p>
             </div>
           )}
         </div>

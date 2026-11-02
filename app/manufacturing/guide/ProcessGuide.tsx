@@ -220,13 +220,13 @@ export function ProcessGuide() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-[#60A5FA] mb-3">
                 <Factory className="w-4 h-4" />
-                Bisonstechs ERP — Manufacturing Operating System
+                FastNxt ERP — Manufacturing Operating System
               </div>
               <h1 className="text-2xl md:text-3xl font-black tracking-tight text-white">
                 Manufacturing Module Process Guide & Diagram
               </h1>
               <p className="text-sm text-white/70 mt-1 max-w-3xl">
-                Complete, enterprise-grade process guide reflecting the actual implemented Bisonstechs ERP system: master data, purchasing, reservations, issues, shop-floor operations, quality, rework, costing, partial completion, and close-short workflows.
+                Complete, enterprise-grade process guide reflecting the actual implemented FastNxt ERP system: master data, purchasing, reservations, issues, shop-floor operations, quality, rework, costing, partial completion, and close-short workflows.
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -287,11 +287,11 @@ export function ProcessGuide() {
             <SectionTitle
               kicker="Visual Process Maps"
               title="End-to-End Manufacturing Journey"
-              desc="Comprehensive visual diagrams of the happy path and alternative operational branches in Bisonstechs ERP."
+              desc="Comprehensive visual diagrams of the happy path and alternative operational branches in FastNxt ERP."
             />
 
             {/* Quick 30-Second Journey */}
-            <SectionCard title="Bisonstechs Manufacturing — 30-Second Journey Summary">
+            <SectionCard title="FastNxt Manufacturing — 30-Second Journey Summary">
               <div className="grid grid-cols-1 md:grid-cols-7 gap-3 text-center text-xs">
                 <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
                   <p className="font-extrabold text-[#014582] uppercase tracking-wider mb-1">1. Preparation</p>
@@ -751,7 +751,7 @@ export function ProcessGuide() {
             <SectionTitle
               kicker="State Machine"
               title="Production Order Status Lifecycle"
-              desc="Comprehensive guide to every status implemented in Bisonstechs ERP."
+              desc="Comprehensive guide to every status implemented in FastNxt ERP."
             />
 
             <div className="bg-white rounded-2xl border border-[#DDE4EE] shadow-sm overflow-hidden">
@@ -957,7 +957,7 @@ export function ProcessGuide() {
             <SectionTitle
               kicker="Practical Examples"
               title="Tested Real-World Scenarios"
-              desc="Five full real-world scenarios verified against the actual Bisonstechs ERP system implementation."
+              desc="Five full real-world scenarios verified against the actual FastNxt ERP system implementation."
             />
 
             <div className="space-y-6">

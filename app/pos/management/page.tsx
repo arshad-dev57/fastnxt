@@ -1311,7 +1311,7 @@ export default function POSManagementPage() {
             <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#94a3b8' }}>
               POS Admin
             </div>
-            <div style={{ marginTop: 6, fontSize: 16, fontWeight: 800, color: '#0f172a' }}>Bisonstechs</div>
+            <div style={{ marginTop: 6, fontSize: 16, fontWeight: 800, color: '#0f172a' }}>FastNxt</div>
             <p style={{ margin: '4px 0 0', fontSize: 12, color: '#64748b', lineHeight: 1.4 }}>
               Company-wide terminals, sales history, and receipt template for desktop POS.
             </p>

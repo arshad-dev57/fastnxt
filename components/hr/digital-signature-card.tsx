@@ -19,7 +19,7 @@ export default function DigitalSignatureBlock({
   approvedBy = { name: 'Executive Director', designation: 'Authorized Signatory', date: new Date().toISOString().slice(0, 10) },
   signatureUrl,
   stampUrl,
-  companyName = 'Bisonstechs Enterprise',
+  companyName = 'FastNxt Enterprise',
   className = '',
 }: SignatureBlockProps) {
   return (
@@ -100,7 +100,7 @@ export default function DigitalSignatureBlock({
         </div>
       </div>
       <p className="text-[10px] text-center text-[#7A8FA6] mt-4 italic">
-        Electronic Signature Asset • Authorized for internal Bisonstechs ERP record generation
+        Electronic Signature Asset • Authorized for internal FastNxt ERP record generation
       </p>
     </div>
   );

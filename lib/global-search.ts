@@ -247,7 +247,7 @@ export const GLOBAL_SEARCH_PAGES: GlobalSearchPage[] = [
   { path: '/hr/payroll/pay-register', label: 'Salary Register', group: 'hr', module: 'hr', keywords: ['salary register', 'payroll register'] },
   { path: '/hr/settings/payroll', label: 'Payroll Settings', group: 'hr', module: 'hr', keywords: ['salary policy', 'deduction policy'] },
   { path: '/hr/settings', label: 'HR Settings', group: 'hr', module: 'hr', keywords: ['configuration'] },
-  // Bisonstechs-only tracking kept discoverable but out of the ERPNext workspace tree
+  // FastNxt-only tracking kept discoverable but out of the ERPNext workspace tree
   { path: '/hr/live-tracking', label: 'Live Tracking', group: 'hr', module: 'hr', keywords: ['gps', 'field staff'] },
   // ============================== Tax ===============================
   { path: '/tax', label: 'Tax Overview', group: 'tax', module: 'tax', keywords: ['tax compliance', 'vat', 'gst'] },

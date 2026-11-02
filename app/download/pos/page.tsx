@@ -103,7 +103,7 @@ export default function PosDesktopDownloadPage() {
 
   return (
     <AuthSplitLayout
-      title="Bisonstechs POS"
+      title="FastNxt POS"
       subtitle="Native desktop app for checkout, shifts, offline sales, and restaurant kitchen flows."
     >
       <div className="w-full max-w-lg mx-auto space-y-6">
@@ -116,7 +116,7 @@ export default function PosDesktopDownloadPage() {
         </Link>
 
         <div className="flex items-center gap-3">
-          <Image src="/bisontechs.png" alt="Bisonstechs" width={40} height={40} className="rounded-lg" />
+          <Image src="/fastnxt-logo.png" alt="FastNxt" width={40} height={40} className="rounded-lg" />
           <div>
             <h1 className="text-2xl font-bold text-gray-900 tracking-tight">Download POS desktop</h1>
             {versionLabel ? (
@@ -157,15 +157,15 @@ export default function PosDesktopDownloadPage() {
           </div>
           <ul className="list-disc pl-5 space-y-2 leading-relaxed">
             <li>
-              <strong>macOS:</strong> Open the <code className="text-xs">.dmg</code>, drag Bisonstechs POS to
+              <strong>macOS:</strong> Open the <code className="text-xs">.dmg</code>, drag FastNxt POS to
               Applications, then launch from Applications. If macOS blocks the app, right-click → Open once (unsigned
               builds may require this until signed/notarized).
             </li>
             <li>
               <strong>Windows:</strong> Run the <code className="text-xs">.exe</code> installer, choose install
-              location if prompted, then start Bisonstechs POS from the desktop or Start menu.
+              location if prompted, then start FastNxt POS from the desktop or Start menu.
             </li>
-            <li>Sign in with your Bisonstechs account. POS data syncs with your cloud company; local SQLite supports offline selling.</li>
+            <li>Sign in with your FastNxt account. POS data syncs with your cloud company; local SQLite supports offline selling.</li>
           </ul>
           {anyReady && (
             <p className="flex items-start gap-2 text-emerald-800 bg-emerald-50 border border-emerald-100 rounded-lg px-3 py-2">

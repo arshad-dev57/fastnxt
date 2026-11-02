@@ -1,5 +1,5 @@
 /**
- * Frontend Permission Catalog & Types for Bisonstechs ERP
+ * Frontend Permission Catalog & Types for FastNxt ERP
  */
 
 export interface PermissionActionDef {

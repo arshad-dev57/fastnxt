@@ -321,7 +321,7 @@ export default function AuthSplitLayout({ title, subtitle, children }: Props) {
         <HeroArt />
 
         <div className="relative z-10">
-          <p className="text-2xl font-semibold text-white mb-14">Welcome to Bisonstechs</p>
+          <p className="text-2xl font-semibold text-white mb-14">Welcome to FastNxt</p>
 
           <div className="relative mb-6 max-w-md">
             <h1 className="text-6xl font-bold text-white leading-[1.1]">{title}</h1>
@@ -346,10 +346,10 @@ export default function AuthSplitLayout({ title, subtitle, children }: Props) {
       <main className="flex-1 lg:w-1/2 flex flex-col items-center px-6 py-10 bg-gray-50">
         <div className="flex flex-col items-center">
           <div className="w-40 h-20 bg-white rounded-xl flex items-center justify-center p-2 shadow-lg">
-            <img src="/bisontechs.png" alt="Bisonstechs" width={150} height={50} className="object-contain" />
+            <img src="/fastnxt-logo.png" alt="FastNxt" width={150} height={50} className="object-contain" />
           </div>
-          <p className="mt-3 text-xl font-extrabold text-gray-800">Bisonstechs</p>
-          <p className="text-xs text-gray-500">Business Suite</p>
+          <p className="mt-3 text-xl font-extrabold text-gray-800">FastNxt</p>
+          <p className="text-xs text-gray-500">COMPLETE BUSINESS MANAGEMENT APP</p>
         </div>
 
         <div className="flex-1 w-full flex flex-col items-center justify-center gap-8 py-10">

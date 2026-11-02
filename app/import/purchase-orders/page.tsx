@@ -612,7 +612,7 @@ export default function ImportPurchaseOrdersPage() {
               <div>
                 <p className="font-bold text-emerald-900 text-xs">Standard ERP Integration</p>
                 <p className="text-[11px] text-emerald-700">
-                  This PO is linked to Bisonstechs Purchase Master and inventory receiving ledger.
+                  This PO is linked to FastNxt Purchase Master and inventory receiving ledger.
                 </p>
               </div>
               <Link

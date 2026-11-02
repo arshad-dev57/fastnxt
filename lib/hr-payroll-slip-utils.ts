@@ -114,7 +114,7 @@ export function printPayslip(slip: PayrollSlipRow | any, payDate?: string, hrSet
   if (!win) return;
   const paid = slip.paidAt ? String(slip.paidAt).slice(0, 10) : payDate || 'Pending';
 
-  const companyName = hrSettings?.companyName || 'Bisonstechs ERP';
+  const companyName = hrSettings?.companyName || 'FastNxt ERP';
   const companyAddress = hrSettings?.companyAddress || '';
   const primaryLogo = hrSettings?.showLogo && hrSettings?.primaryLogo ? hrSettings.primaryLogo : '';
   const secondaryLogo = hrSettings?.showLogo && hrSettings?.secondaryLogo ? hrSettings.secondaryLogo : '';

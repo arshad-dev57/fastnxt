@@ -212,7 +212,7 @@ export default function PricingSection({
         </p>
         <ul className="mt-2 list-inside list-disc space-y-1 text-amber-900/90">
           <li>
-            <strong>Bisonstechs Order Picker</strong> mobile app — waiters send orders to kitchen
+            <strong>FastNxt Order Picker</strong> mobile app — waiters send orders to kitchen
             (cloud API)
           </li>
           <li>

@@ -303,7 +303,7 @@ function RocketBeside() {
 function BrandLogo({ className = '' }: { className?: string }) {
   return (
     <div className={`bg-white rounded-xl flex items-center justify-center p-2 shadow-lg ${className}`}>
-      <img src="/bisontechs.png" alt="Bisonstechs" width={150} height={50} className="object-contain" />
+      <img src="/fastnxt-logo.png" alt="FastNxt" width={150} height={50} className="object-contain" />
     </div>
   );
 }
@@ -426,7 +426,7 @@ function LoginForm() {
         <HeroArt />
 
         <div className="relative z-10">
-          <p className="text-2xl font-semibold text-white mb-14">Welcome to Bisonstechs</p>
+          <p className="text-2xl font-semibold text-white mb-14">Welcome to FastNxt</p>
 
           <div className="relative mb-6 max-w-md">
             <h1 className="text-6xl font-bold text-white leading-[1.1]">
@@ -455,14 +455,14 @@ function LoginForm() {
       <div className="flex-1 lg:w-1/2 flex flex-col items-center px-6 py-10 bg-gray-50">
         <div className="flex flex-col items-center">
           <BrandLogo className="w-40 h-20" />
-          <p className="mt-3 text-xl font-extrabold text-gray-800">Bisonstechs</p>
-          <p className="text-xs text-gray-500">Business Suite</p>
+          <p className="mt-3 text-xl font-extrabold text-gray-800">FastNxt</p>
+          <p className="text-xs text-gray-500">COMPLETE BUSINESS MANAGEMENT APP</p>
         </div>
 
         <div className="flex-1 w-full flex items-center justify-center py-10">
           <div className="w-full max-w-[480px] rounded-3xl border border-gray-200 bg-white p-10 shadow-xl shadow-gray-200/60">
             <h2 className="text-2xl font-bold text-gray-800 mb-1">Sign into your account:</h2>
-            <p className="text-gray-500 text-sm mb-8">Sign in to continue to Bisonstechs</p>
+            <p className="text-gray-500 text-sm mb-8">Sign in to continue to FastNxt</p>
 
             {resetSuccess && (
               <div className="mb-6 p-3 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm font-medium flex items-center gap-2">

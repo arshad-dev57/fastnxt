@@ -142,7 +142,7 @@ export function resolveReceiptCompany(
     profile?.organizationName ||
     company.name ||
     local.name ||
-    'Bisonstechs';
+    'FastNxt';
   const logo = tpl.showLogo === false ? '' : String(tpl.storeLogo || '');
 
   return {

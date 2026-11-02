@@ -38,7 +38,7 @@ export function generateCorporateReportPrintHtml({
   hrSettings?: HRPrintSettingItem | null;
   signatories?: HRSignatoryItem[];
 }) {
-  const companyName = hrSettings?.companyName || 'Bisonstechs ERP';
+  const companyName = hrSettings?.companyName || 'FastNxt ERP';
   const companyAddress = hrSettings?.companyAddress || '';
   const primaryLogo = hrSettings?.showLogo && hrSettings?.primaryLogo ? hrSettings.primaryLogo : '';
   const secondaryLogo = hrSettings?.showLogo && hrSettings?.secondaryLogo ? hrSettings.secondaryLogo : '';

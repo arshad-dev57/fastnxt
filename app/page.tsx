@@ -2,11 +2,7 @@ export const dynamic = 'force-dynamic';
 
 import { redirect } from 'next/navigation';
 
-const MARKETING_URL =
-  process.env.NEXT_PUBLIC_MARKETING_URL?.replace(/\/$/, '') ||
-  'https://bisonstechs.com';
-
-/** Fallback if proxy does not run: marketing site first. Session routing is in proxy. */
+/** If not logged in, redirect to login page instead of marketing site */
 export default function Home() {
-  redirect(MARKETING_URL);
+  redirect('/login');
 }

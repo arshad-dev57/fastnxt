@@ -208,7 +208,7 @@ export default function POSLandingPage() {
                           </>
                         ) : (
                           <>
-                            Checkout, barcode scanning, receipts, and shift management are in the Bisonstechs POS desktop app.
+                            Checkout, barcode scanning, receipts, and shift management are in the FastNxt POS desktop app.
                             Create <strong>cashier</strong> users under Users for register staff.
                           </>
                         )}

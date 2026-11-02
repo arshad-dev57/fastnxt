@@ -25,7 +25,7 @@ export const HRDocumentRenderer: React.FC<HRDocumentRendererProps> = ({
   showSignatures = true
 }) => {
   const brand: Partial<HRPrintSettingItem> = settings || {
-    companyName: 'Bisonstechs ERP',
+    companyName: 'FastNxt ERP',
     primaryColor: '#014582',
     fontFamily: 'Inter',
     showLogo: true,
@@ -64,7 +64,7 @@ export const HRDocumentRenderer: React.FC<HRDocumentRendererProps> = ({
           )}
           <div>
             <h1 className="font-extrabold text-xl leading-tight" style={{ color: brand.primaryColor || '#014582' }}>
-              {brand.companyName || 'Bisonstechs ERP'}
+              {brand.companyName || 'FastNxt ERP'}
             </h1>
             {brand.companyAddress && (
               <p className="text-xs text-slate-500 max-w-md mt-0.5">{brand.companyAddress}</p>

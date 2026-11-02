@@ -4,10 +4,6 @@ import {
   applyClearedAuthCookies,
 } from '@/lib/auth-cookies';
 
-const MARKETING_URL =
-  process.env.NEXT_PUBLIC_MARKETING_URL?.replace(/\/$/, '') ||
-  'https://bisonstechs.com';
-
 function redirectToAppLogin(request: NextRequest) {
   const url = request.nextUrl.clone();
   const nextPath = request.nextUrl.pathname + request.nextUrl.search;
@@ -82,10 +78,10 @@ export async function proxy(request: NextRequest) {
     return redirectToLoginAndStripCookies(request);
   }
 
-  // Marketing first: no session on `/` → website. /enter is the app gate.
+  // If not logged in on `/`, redirect to login page instead of marketing site
   if (pathname === '/') {
     if (!token) {
-      return NextResponse.redirect(MARKETING_URL);
+      return NextResponse.redirect(new URL('/login', request.url));
     }
     const access = request.cookies.get('subscription_access')?.value;
     if (access === '0') {

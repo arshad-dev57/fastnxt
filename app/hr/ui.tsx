@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * HR chrome aligned to Bisonstechs app brand (#014582), dense desk layout,
+ * HR chrome aligned to FastNxt app brand (#014582), dense desk layout,
  * hairline borders, and full-width content (no centered max-width gutters).
  */
 

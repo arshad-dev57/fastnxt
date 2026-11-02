@@ -15,7 +15,7 @@
  *   DESKTOP_APP_MAC_PATH / DESKTOP_APP_WIN_PATH with `/api/download/desktop?platform=...`
  */
 
-const POS_PRODUCT_FILENAME = 'Bisonstechs POS';
+const POS_PRODUCT_FILENAME = 'FastNxt POS';
 
 export type DesktopOsHint = 'mac' | 'macIntel' | 'win' | 'other';
 
@@ -131,21 +131,21 @@ export function getDesktopDownloadPageModel(): DesktopDownloadPageModel {
       id: 'mac',
       title: 'macOS (Apple Silicon)',
       subtitle: 'M1, M2, M3, and newer Macs',
-      fileLabel: version ? `Bisonstechs POS ${version} — .dmg (arm64)` : 'macOS .dmg (arm64)',
+      fileLabel: version ? `FastNxt POS ${version} — .dmg (arm64)` : 'macOS .dmg (arm64)',
       url: mac,
     },
     {
       id: 'macIntel',
       title: 'macOS (Intel)',
       subtitle: 'Older Intel-based Macs',
-      fileLabel: version ? `Bisonstechs POS ${version} — .dmg (x64)` : 'macOS .dmg (x64)',
+      fileLabel: version ? `FastNxt POS ${version} — .dmg (x64)` : 'macOS .dmg (x64)',
       url: macIntel,
     },
     {
       id: 'win',
       title: 'Windows',
       subtitle: 'Windows 10 / 11 (64-bit)',
-      fileLabel: version ? `Bisonstechs POS ${version} — .exe (x64)` : 'Windows .exe (x64)',
+      fileLabel: version ? `FastNxt POS ${version} — .exe (x64)` : 'Windows .exe (x64)',
       url: win,
     },
   ];
