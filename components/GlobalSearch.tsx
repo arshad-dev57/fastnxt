@@ -28,6 +28,7 @@ import {
   Ship,
   Send,
   ArrowLeftRight,
+  Stethoscope,
   X,
 } from 'lucide-react';
 import { usePermissions } from '../lib/usePermissions';
@@ -52,6 +53,7 @@ const GROUP_ICONS: Record<GlobalSearchGroupKey, ElementType> = {
   import: Ship,
   export: Send,
   trading: ArrowLeftRight,
+  clinic: Stethoscope,
   hr: UsersRound,
   tax: Scale,
   pos: Store,

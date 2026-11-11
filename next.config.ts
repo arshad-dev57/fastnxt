@@ -74,6 +74,7 @@ const nextConfig: NextConfig = {
       { source: "/import", destination: "/import/dashboard", permanent: false },
       { source: "/export", destination: "/export/dashboard", permanent: false },
       { source: "/trading", destination: "/trading/dashboard", permanent: false },
+      { source: "/clinic", destination: "/clinic/dashboard", permanent: false },
 
       {
         source: "/manufacturing",

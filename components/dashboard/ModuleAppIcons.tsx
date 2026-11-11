@@ -422,3 +422,33 @@ export function TradingAppIcon({ className }: IconProps) {
   );
 }
 
+export function ClinicAppIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden>
+      <g className="clinic-cross">
+        <rect x="12" y="12" width="40" height="40" rx="12" fill="#0f766e" />
+        <rect className="clinic-arm" x="28" y="18" width="8" height="28" rx="2" fill="#ECFDF5" />
+        <rect className="clinic-arm" x="18" y="28" width="28" height="8" rx="2" fill="#A7F3D0" />
+        <circle className="clinic-pulse" cx="48" cy="16" r="4" fill="#F06050" />
+      </g>
+      <style>{`
+        .clinic-cross { transform-box: fill-box; transform-origin: center; animation: clinicFloat 1.5s ease-in-out infinite alternate; }
+        .clinic-arm { animation: clinicPulse 1.2s ease-in-out infinite; }
+        .clinic-pulse { animation: clinicDot 1s ease-in-out infinite; }
+        @keyframes clinicFloat {
+          from { transform: translateY(0); }
+          to { transform: translateY(-2px); }
+        }
+        @keyframes clinicPulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.75; }
+        }
+        @keyframes clinicDot {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.25); opacity: 0.65; }
+        }
+      `}</style>
+    </svg>
+  );
+}
+

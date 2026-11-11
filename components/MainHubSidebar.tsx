@@ -21,6 +21,7 @@ import {
   ArrowLeftRight,
   Ship,
   Send,
+  Stethoscope,
 } from 'lucide-react';
 import { usePermissions } from '../lib/usePermissions';
 import { BrandHeader } from './BrandHeader';
@@ -151,6 +152,12 @@ export function MainHubSidebar({ activePath = '/dashboard' }: { activePath?: str
           show: isAdmin || hasModuleAccess('export'),
         },
         {
+          icon: <Stethoscope className="w-5 h-5" />,
+          label: 'Clinic Management',
+          path: '/clinic/dashboard',
+          show: isAdmin || hasModuleAccess('clinic'),
+        },
+        {
           icon: <Store className="w-5 h-5" />,
           label: 'Point of Sale',
           path: '/pos',
@@ -210,6 +217,8 @@ export function MainHubSidebar({ activePath = '/dashboard' }: { activePath?: str
           const isActive =
             item.path === '/hr/dashboard'
               ? activePath === '/hr' || activePath.startsWith('/hr/')
+              : item.path === '/clinic/dashboard'
+              ? activePath === '/clinic' || activePath.startsWith('/clinic/')
               : activePath === item.path || activePath.startsWith(`${item.path}/`);
           return (
             <button

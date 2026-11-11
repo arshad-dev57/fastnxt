@@ -29,6 +29,7 @@ import {
   ImportAppIcon,
   ExportAppIcon,
   TradingAppIcon,
+  ClinicAppIcon,
 } from '../../components/dashboard/ModuleAppIcons';
 
 const banners = [
@@ -136,6 +137,13 @@ const modules: ModuleItem[] = [
     Icon: ExportAppIcon,
     detail: 'Overseas shipments, customs documents, packing lists, and proforma bills.',
     permModule: 'export',
+  },
+  {
+    title: 'Clinic Management',
+    href: '/clinic/dashboard',
+    Icon: ClinicAppIcon,
+    detail: 'Patients, appointments, therapy sessions, billing, and clinic operations.',
+    permModule: 'clinic',
   },
   {
     title: 'Tax Compliance',

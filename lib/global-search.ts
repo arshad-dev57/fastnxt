@@ -21,6 +21,7 @@ export type GlobalSearchGroupKey =
   | 'import'
   | 'export'
   | 'trading'
+  | 'clinic'
   | 'hr'
   | 'tax'
   | 'pos';
@@ -57,6 +58,7 @@ export const SEARCH_GROUPS: Record<
   import: { label: 'Import Management', href: '/import/dashboard' },
   export: { label: 'Export Management', href: '/export/dashboard' },
   trading: { label: 'Trading Management', href: '/trading/dashboard' },
+  clinic: { label: 'Clinic Management', href: '/clinic/dashboard' },
   hr: { label: 'HR', href: '/hr/hr-setup' },
   tax: { label: 'Tax', href: '/tax' },
   pos: { label: 'Point of Sale', href: '/pos' },
@@ -249,6 +251,32 @@ export const GLOBAL_SEARCH_PAGES: GlobalSearchPage[] = [
   { path: '/hr/settings', label: 'HR Settings', group: 'hr', module: 'hr', keywords: ['configuration'] },
   // FastNxt-only tracking kept discoverable but out of the ERPNext workspace tree
   { path: '/hr/live-tracking', label: 'Live Tracking', group: 'hr', module: 'hr', keywords: ['gps', 'field staff'] },
+  // ============================ Clinic ==============================
+  { path: '/clinic/dashboard', label: 'Clinic Dashboard', group: 'clinic', module: 'clinic', keywords: ['healthcare', 'therapy clinic', 'patients overview'] },
+  { path: '/clinic/calendar', label: 'Calendar & Appointments', group: 'clinic', module: 'clinic', keywords: ['booking', 'schedule', 'appointments'] },
+  { path: '/clinic/waiting-list', label: 'Waiting List', group: 'clinic', module: 'clinic', keywords: ['queue', 'waitlist'] },
+  { path: '/clinic/patients', label: 'Patients', group: 'clinic', module: 'clinic', keywords: ['patient registry', 'medical patients'] },
+  { path: '/clinic/medical-records', label: 'Medical Records', group: 'clinic', module: 'clinic', keywords: ['history', 'allergies', 'diagnosis'] },
+  { path: '/clinic/therapies', label: 'Therapies & Services', group: 'clinic', module: 'clinic', keywords: ['services catalog', 'physiotherapy'] },
+  { path: '/clinic/sessions', label: 'Therapy Sessions', group: 'clinic', module: 'clinic', keywords: ['session notes', 'treatment session'] },
+  { path: '/clinic/treatment-plans', label: 'Treatment Plans', group: 'clinic', module: 'clinic', keywords: ['care plan', 'rehab plan'] },
+  { path: '/clinic/prescriptions', label: 'Prescriptions', group: 'clinic', module: 'clinic', keywords: ['medication', 'rx'] },
+  { path: '/clinic/follow-ups', label: 'Follow-ups', group: 'clinic', module: 'clinic', keywords: ['callbacks', 'reminders'] },
+  { path: '/clinic/therapists', label: 'Therapists', group: 'clinic', module: 'clinic', keywords: ['clinicians', 'doctors'] },
+  { path: '/clinic/therapist-schedules', label: 'Therapist Schedules', group: 'clinic', module: 'clinic', keywords: ['availability', 'shifts'] },
+  { path: '/clinic/rooms', label: 'Rooms & Facilities', group: 'clinic', module: 'clinic', keywords: ['rooms', 'facilities'] },
+  { path: '/clinic/staff', label: 'Clinic Staff', group: 'clinic', module: 'clinic', keywords: ['reception', 'nurses'] },
+  { path: '/clinic/inventory', label: 'Clinic Inventory', group: 'clinic', module: 'clinic', keywords: ['equipment', 'supplies'] },
+  { path: '/clinic/invoices', label: 'Clinic Invoices', group: 'clinic', module: 'clinic', keywords: ['billing', 'clinic invoices'] },
+  { path: '/clinic/payments', label: 'Clinic Payments', group: 'clinic', module: 'clinic', keywords: ['receipts', 'clinic payments'] },
+  { path: '/clinic/packages', label: 'Therapy Packages', group: 'clinic', module: 'clinic', keywords: ['session packages'] },
+  { path: '/clinic/expenses', label: 'Clinic Expenses', group: 'clinic', module: 'clinic', keywords: ['clinic costs'] },
+  { path: '/clinic/reports', label: 'Clinic Reports', group: 'clinic', module: 'clinic', keywords: ['analytics', 'clinic reports'] },
+  { path: '/clinic/notifications', label: 'Clinic Notifications', group: 'clinic', module: 'clinic', keywords: ['alerts'] },
+  { path: '/clinic/patient-portal', label: 'Patient Portal', group: 'clinic', module: 'clinic', keywords: ['portal preview'] },
+  { path: '/clinic/settings', label: 'Clinic Settings', group: 'clinic', module: 'clinic', keywords: ['configuration', 'branding'] },
+  { path: '/clinic/roles', label: 'Clinic Roles', group: 'clinic', module: 'clinic', keywords: ['permissions'] },
+  { path: '/clinic/audit-logs', label: 'Clinic Audit Logs', group: 'clinic', module: 'clinic', keywords: ['activity log'] },
   // ============================== Tax ===============================
   { path: '/tax', label: 'Tax Overview', group: 'tax', module: 'tax', keywords: ['tax compliance', 'vat', 'gst'] },
   { path: '/tax/setup', label: 'Country & Tax Profile', group: 'tax', module: 'tax', keywords: ['tax setup', 'jurisdiction'] },
