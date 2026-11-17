@@ -1,5 +1,5 @@
 // lib/marketing-session.ts
-/** Bridge cookie readable on bisonstechs.com (and app subdomain). */
+/** Bridge cookie readable on root domain (and app subdomain). */
 
 import { LOGGED_IN_COOKIE, AUTH_TOKEN_MAX_AGE } from './auth-cookies';
 
@@ -30,7 +30,8 @@ export function clearMarketingLoggedInFlag() {
     host === 'localhost' || host === '127.0.0.1' || host.endsWith('.local');
   if (isLocal) return;
 
-  const domain =
-    process.env.NEXT_PUBLIC_COOKIE_DOMAIN?.trim() || '.bisonstechs.com';
-  document.cookie = `${LOGGED_IN_COOKIE}=; expires=${expires}; Max-Age=0; path=/; domain=${domain}`;
+  const domain = process.env.NEXT_PUBLIC_COOKIE_DOMAIN?.trim();
+  if (domain) {
+    document.cookie = `${LOGGED_IN_COOKIE}=; expires=${expires}; Max-Age=0; path=/; domain=${domain}`;
+  }
 }

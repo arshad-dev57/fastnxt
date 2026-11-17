@@ -8,6 +8,7 @@ import {
   type PayRegisterTotals,
 } from './hr-payroll-slip-utils';
 
+
 export type PayRegisterExportMeta = {
   period: string;
   periodLabel: string;
@@ -98,6 +99,7 @@ export function downloadPayRegisterCsv(
     const v = rowValues(row);
     return EXPORT_COLUMNS.map((c) => csvEscape(v[c.key as keyof typeof v])).join(',');
   });
+  
   const totalLine = [
     'TOTALS',
     `${totals.count} employees`,
@@ -132,6 +134,7 @@ export function downloadPayRegisterCsv(
   a.click();
   URL.revokeObjectURL(url);
 }
+
 
 function buildRegisterHtml(rows: PayrollSlipRow[], meta: PayRegisterExportMeta, totals: PayRegisterTotals) {
   const co = companyMeta();
@@ -198,6 +201,8 @@ function buildRegisterHtml(rows: PayrollSlipRow[], meta: PayRegisterExportMeta, 
   </table>
   </body></html>`;
 }
+
+
 
 export function printPayRegister(rows: PayrollSlipRow[], meta: PayRegisterExportMeta, totals: PayRegisterTotals) {
   const html = buildRegisterHtml(rows, meta, totals);
@@ -276,6 +281,7 @@ export async function downloadPayRegisterPdf(
     styles: { fontSize: 6, cellPadding: 1.5 },
     margin: { left: margin, right: margin },
   });
+
 
   finalize({ filename: `pay-register-${meta.period}.pdf` });
 }

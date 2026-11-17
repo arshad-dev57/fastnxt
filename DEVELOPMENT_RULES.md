@@ -1,4 +1,4 @@
-# Bisonstechs ERP - Development Rules
+# FastNxt ERP - Development Rules
 
 ## Mandatory AI Startup Procedure
 
@@ -471,4 +471,4 @@ These rules should be:
 - **Shared** with all developers working on the project
 - **Enforced** through code review and testing processes
 
-Remember: These rules exist to maintain code quality, system integrity, and development efficiency. Following them ensures the Bisonstechs ERP remains maintainable, secure, and reliable.
+Remember: These rules exist to maintain code quality, system integrity, and development efficiency. Following them ensures the FastNxt ERP remains maintainable, secure, and reliable.

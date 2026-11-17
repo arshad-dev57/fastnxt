@@ -1,6 +1,6 @@
 /**
  * Manufacturing Process Guide — static content/data.
- * Every statement here mirrors the actual Bisonstechs implementation
+ * Every statement here mirrors the actual FastNxt implementation
  * (production order statuses/transitions, reservation/issue, output cap,
  * close-short reason, quality/rework/scrap/by-product/costing behavior and
  * the real frontend routes used for "Open Screen" links).

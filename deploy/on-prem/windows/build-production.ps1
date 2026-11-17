@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-  Production build for Bisonstechs Next.js (standalone) on-prem.
+  Production build for FastNxt Next.js (standalone) on-prem.
 
 .DESCRIPTION
   Loads .env.onprem, runs next build with API_URL baked into rewrites.
@@ -55,7 +55,7 @@ if (-not $EnvFile) {
   $EnvFile = Join-Path $WebRoot '.env.onprem'
 }
 
-Write-Host 'Bisonstechs — Next.js production build (standalone)' -ForegroundColor Green
+Write-Host 'FastNxt — Next.js production build (standalone)' -ForegroundColor Green
 Write-Host "Web root: $WebRoot"
 
 if (-not (Test-Path (Join-Path $WebRoot 'package.json'))) {

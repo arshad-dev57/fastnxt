@@ -1,6 +1,6 @@
-# Bisonstechs ERP - Changelog
+# FastNxt ERP - Changelog
 
-This document tracks all significant changes to the Bisonstechs ERP system.
+This document tracks all significant changes to the FastNxt ERP system.
 
 ## 2026-09-22
 

@@ -60,14 +60,8 @@ const GROUP_ICONS: Record<GlobalSearchGroupKey, ElementType> = {
 };
 
 const MAX_RESULTS = 48;
-/** Space (px) the panel needs — used to decide whether it opens up or down. */
 const PANEL_SPACE = 420;
 
-/**
- * Header search: a small icon that expands into an animated page-search panel
- * anchored to the icon. Any page of the app can be found by name and opened
- * with a click, ⌘K / Ctrl+K or Enter.
- */
 export default function GlobalSearch({ className = '' }: { className?: string }) {
   const router = useRouter();
   const { isAdmin, loading, canViewRegisteredUsers, hasSubPageAccess } =
@@ -109,8 +103,6 @@ export default function GlobalSearch({ className = '' }: { className?: string })
     [query, allowedPages]
   );
 
-  // Group results and remember where each group starts inside the flat list so
-  // keyboard navigation and rendering use the same index.
   const groupedResults = useMemo(() => {
     const groups = groupGlobalSearchResults(results);
     return groups.map((group, groupIndex) => ({
@@ -152,14 +144,12 @@ export default function GlobalSearch({ className = '' }: { className?: string })
     else openPanel();
   }, [open, close, openPanel]);
 
-  // Dashboard module tile (and other UI) can open search via this event.
   useEffect(() => {
     const onOpen = () => openPanel();
     window.addEventListener('open-global-search', onOpen);
     return () => window.removeEventListener('open-global-search', onOpen);
   }, [openPanel]);
 
-  // Close when clicking anywhere outside the search.
   useEffect(() => {
     if (!open) return;
     const onDocumentMouseDown = (event: MouseEvent) => {
@@ -171,7 +161,6 @@ export default function GlobalSearch({ className = '' }: { className?: string })
     return () => document.removeEventListener('mousedown', onDocumentMouseDown);
   }, [open, close]);
 
-  // ⌘K / Ctrl+K toggles the search from anywhere in the app.
   useEffect(() => {
     const onWindowKeyDown = (event: KeyboardEvent) => {
       if (!(event.metaKey || event.ctrlKey) || event.key.toLowerCase() !== 'k') {
@@ -184,14 +173,12 @@ export default function GlobalSearch({ className = '' }: { className?: string })
     return () => window.removeEventListener('keydown', onWindowKeyDown);
   }, [toggle]);
 
-  // Focus the input once the opening animation has started.
   useEffect(() => {
     if (!open) return;
     const timer = window.setTimeout(() => inputRef.current?.focus(), 60);
     return () => window.clearTimeout(timer);
   }, [open]);
 
-  // Keep the keyboard-highlighted row inside the visible list.
   useEffect(() => {
     if (!open) return;
     const node = listRef.current?.querySelector<HTMLElement>(
@@ -245,9 +232,8 @@ export default function GlobalSearch({ className = '' }: { className?: string })
 
   const panelAnimation = open
     ? 'visible translate-y-0 scale-100 opacity-100'
-    : `invisible scale-95 opacity-0 ${
-        openUp ? 'translate-y-1' : '-translate-y-1'
-      }`;
+    : `invisible scale-95 opacity-0 ${openUp ? 'translate-y-1' : '-translate-y-1'
+    }`;
 
   const hasQuery = query.trim().length > 0;
 
@@ -260,11 +246,10 @@ export default function GlobalSearch({ className = '' }: { className?: string })
         aria-label="Search pages"
         aria-expanded={open}
         title="Search pages (⌘K)"
-        className={`flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm transition-all ${
-          open
-            ? 'bg-[#0f766e]/10 text-[#0f766e]'
-            : 'text-gray-600 hover:bg-gray-100 hover:text-gray-800'
-        }`}
+        className={`flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-sm transition-all ${open
+          ? 'bg-[#0f766e]/10 text-[#0f766e]'
+          : 'text-gray-600 hover:bg-gray-100 hover:text-gray-800'
+          }`}
       >
         <Search className="h-4 w-4" />
         <span className="hidden lg:inline">Search</span>
@@ -356,16 +341,14 @@ export default function GlobalSearch({ className = '' }: { className?: string })
                         data-index={flatIndex}
                         onClick={close}
                         onMouseEnter={() => setActiveIndex(flatIndex)}
-                        className={`flex items-center gap-2.5 px-3 py-2 text-sm transition-colors ${
-                          active
-                            ? 'bg-[#0f766e]/10 text-[#0f766e]'
-                            : 'text-gray-700 hover:bg-gray-50'
-                        }`}
+                        className={`flex items-center gap-2.5 px-3 py-2 text-sm transition-colors ${active
+                          ? 'bg-[#0f766e]/10 text-[#0f766e]'
+                          : 'text-gray-700 hover:bg-gray-50'
+                          }`}
                       >
                         <Icon
-                          className={`h-4 w-4 flex-shrink-0 ${
-                            active ? 'text-[#0f766e]' : 'text-gray-400'
-                          }`}
+                          className={`h-4 w-4 flex-shrink-0 ${active ? 'text-[#0f766e]' : 'text-gray-400'
+                            }`}
                         />
                         <span className="min-w-0 flex-1 truncate">
                           {splitHighlight(page.label, query).map(

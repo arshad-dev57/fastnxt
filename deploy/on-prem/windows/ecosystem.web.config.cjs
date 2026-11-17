@@ -1,11 +1,11 @@
 /**
- * PM2 ecosystem — Bisonstechs Next.js web app (Windows on-prem, standalone).
+ * PM2 ecosystem — FastNxt Next.js web app (Windows on-prem, standalone).
  *
  * Runtime env (PORT, HOSTNAME, API_URL, COOKIE_SECURE, etc.) comes from the
  * standalone folder `.env` / `.env.production` — do not put secrets here.
  *
  * Resolves runtime root in order:
- *   1. BISONSTECHS_WEB_RUNTIME env var
+ *   1. FASTNXT_WEB_RUNTIME env var
  *   2. Same folder as this file (packaged `package/` layout)
  *   3. deploy/on-prem/windows/package/
  *   4. Repo .next/standalone (dev build on server)
@@ -14,8 +14,8 @@ const fs = require('fs');
 const path = require('path');
 
 function resolveRuntimeRoot() {
-  if (process.env.BISONSTECHS_WEB_RUNTIME) {
-    return path.resolve(process.env.BISONSTECHS_WEB_RUNTIME);
+  if (process.env.FASTNXT_WEB_RUNTIME) {
+    return path.resolve(process.env.FASTNXT_WEB_RUNTIME);
   }
 
   const candidates = [
@@ -41,7 +41,7 @@ const logsDir = path.join(__dirname, 'logs');
 module.exports = {
   apps: [
     {
-      name: 'bisonstechs-web',
+      name: 'fastnxt-web',
       script: path.join(runtimeRoot, 'server.js'),
       cwd: runtimeRoot,
       instances: 1,

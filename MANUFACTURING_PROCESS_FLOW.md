@@ -1,4 +1,4 @@
-# Bisonstechs ERP — Manufacturing Process Flow & Visual Diagrams
+# FastNxt ERP — Manufacturing Process Flow & Visual Diagrams
 
 Please see the full documentation artifact in [`docs/MANUFACTURING_PROCESS_FLOW.md`](file:///Users/glplanet/Documents/accounting-web-app/docs/MANUFACTURING_PROCESS_FLOW.md).
 

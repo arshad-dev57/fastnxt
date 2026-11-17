@@ -1,8 +1,8 @@
-# Bisonstechs ERP - AI Context Documentation
+# FastNxt ERP - AI Context Documentation
 
 ## Project Overview
 
-**Project Name**: Bisonstechs ERP  
+**Project Name**: FastNxt ERP  
 **Project Purpose**: Enterprise-level business management system for small to medium businesses  
 **Version**: Enterprise multi-module ERP with POS integration
 

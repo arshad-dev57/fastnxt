@@ -1,7 +1,7 @@
 import { apiClient } from '@/lib/api-client';
 
 /** Keep in sync with company-context COMPANY_STORAGE_KEY (avoid circular import). */
-const COMPANY_STORAGE_KEY = 'bisonstechs_active_company_id';
+const COMPANY_STORAGE_KEY = 'fastnxt_active_company_id';
 
 export type FiscalYearStatus = 'Open' | 'Closed';
 

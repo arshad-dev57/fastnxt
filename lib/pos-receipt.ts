@@ -90,7 +90,9 @@ function readLocalCompanyFallback() {
     return { name: '', logo: '', address: '' };
   }
   try {
-    const brandingRaw = localStorage.getItem('bisonstechs_company_branding');
+    const brandingRaw =
+      localStorage.getItem('fastnxt_company_branding') ||
+      localStorage.getItem('bisonstechs_company_branding');
     const branding = brandingRaw ? JSON.parse(brandingRaw) : {};
     const pdfRaw = localStorage.getItem('pdf_report_settings');
     const pdf = pdfRaw ? JSON.parse(pdfRaw) : {};
@@ -683,7 +685,7 @@ export async function downloadPosReceiptPdf(opts: {
   }
   center(template.receiptFooter || 'Thank you for shopping with us!', 8, 'normal');
   center(`Generated ${new Date().toLocaleString()}`, 6);
-  center(template.poweredBy || 'Powered by BisonTechs POS', 6);
+  center(template.poweredBy || 'Powered by FastNxt POS', 6);
 
   doc.save(`receipt_${invoice}.pdf`);
 }

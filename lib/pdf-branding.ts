@@ -98,7 +98,7 @@ export function getBrandingAccentRgb(branding: PdfBranding): [number, number, nu
 }
 
 export function getDisplayCompanyName(branding: PdfBranding): string {
-  return branding.companyName?.trim() || 'BisonsTechs';
+  return branding.companyName?.trim() || 'FastNxt';
 }
 
 /**

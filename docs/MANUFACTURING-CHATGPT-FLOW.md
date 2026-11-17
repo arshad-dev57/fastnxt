@@ -1,6 +1,6 @@
-# Bisonstechs ERP — Manufacturing Flow (ChatGPT Knowledge File)
+# FastNxt ERP — Manufacturing Flow (ChatGPT Knowledge File)
 
-**App:** Bisonstechs ERP  
+**App:** FastNxt ERP  
 **Module:** Manufacturing  
 **Open from:** Main Dashboard → Manufacturing  
 **Base URL:** `/manufacturing/...`
@@ -14,7 +14,7 @@ Yeh file **complete manufacturing module** ka source of truth hai. Isko ChatGPT 
 Neeche wala prompt copy karo, phir is poori file ke baad paste karo:
 
 ```
-You are my Bisonstechs ERP Manufacturing teacher.
+You are my FastNxt ERP Manufacturing teacher.
 
 Use ONLY the document I pasted. Do not invent screens, buttons, fields, or statuses that are not in the document.
 

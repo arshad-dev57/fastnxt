@@ -1,7 +1,7 @@
-# Bisonstechs ERP - Project Status
+# FastNxt ERP - Project Status
 
 ## Overview
-This document tracks the current implementation status of all modules and features in the Bisonstechs ERP system.
+This document tracks the current implementation status of all modules and features in the FastNxt ERP system.
 
 ## Completed Modules
 

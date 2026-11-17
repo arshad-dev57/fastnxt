@@ -181,6 +181,7 @@ class ApiClient {
       localStorage.removeItem('refresh_token');
       localStorage.removeItem('user');
       localStorage.removeItem('userProfile');
+      localStorage.removeItem('fastnxt_company_branding');
       localStorage.removeItem('bisonstechs_company_branding');
     }
   }

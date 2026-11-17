@@ -1,6 +1,6 @@
-# Bisonstechs ERP — Complete Manufacturing Module User Guide & Process Manual
+# FastNxt ERP — Complete Manufacturing Module User Guide & Process Manual
 
-**System:** Bisonstechs ERP  
+**System:** FastNxt ERP  
 **Module:** Manufacturing (Production · Quality · Costing · Materials · Master Data)  
 **Target Audience:** Factory Managers, Production Operators, Warehouse Staff, Cost Accountants, System Administrators  
 **Source of Truth:** Verified against actual backend logic (`/controllers/manufacturingController.js`, `/utils/manufacturingWorkflow.js`) and frontend implementation (`/app/manufacturing/...`).
@@ -9,7 +9,7 @@
 
 ## 1. Main Purpose & Overview
 
-This user guide provides a complete, screen-by-screen, button-by-button operational manual for the Bisonstechs ERP Manufacturing Module. A brand-new ERP user can read this document and immediately understand:
+This user guide provides a complete, screen-by-screen, button-by-button operational manual for the FastNxt ERP Manufacturing Module. A brand-new ERP user can read this document and immediately understand:
 
 * **Where manufacturing starts:** Raw material purchasing and warehouse stock verification.
 * **What master data must be created first:** Products, Warehouses, Work Centers, Machines, BOMs, and Routings.
@@ -642,7 +642,7 @@ When business decides to stop production before reaching planned quantity:
 
 ## 15. Costing Calculation Architecture
 
-Bisonstechs ERP calculates production costing as follows:
+FastNxt ERP calculates production costing as follows:
 
 $$\text{Material Cost} = \sum (\text{BOM Component Estimated Cost} \times \text{Planned Qty})$$
 $$\text{Labor Cost} = \sum (\text{Operation Hours} \times \text{Work Center Cost/Hr} \times \text{Workers})$$

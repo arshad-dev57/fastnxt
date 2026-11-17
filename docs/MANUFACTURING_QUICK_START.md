@@ -1,4 +1,4 @@
-# Bisonstechs ERP — Manufacturing Quick Start Guide
+# FastNxt ERP — Manufacturing Quick Start Guide
 
 **Goal:** Run your first manufacturing job in 10 fast steps without guessing screens or buttons.
 

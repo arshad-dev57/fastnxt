@@ -1,6 +1,6 @@
 # Manufacturing Production Flow — User Guide
 
-**App:** Bisonstechs ERP → Manufacturing  
+**App:** FastNxt ERP → Manufacturing  
 **Audience:** Factory / production staff, planners, warehouse, quality  
 **Open from:** Main Dashboard → **Manufacturing** (`/manufacturing/dashboard`)
 

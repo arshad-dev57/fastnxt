@@ -1,7 +1,7 @@
-# BisonTechs ERP — Complete User Guide (Start to End)
+# FastNxt ERP — Complete User Guide (Start to End)
 
 **Version:** 1.0  
-**App:** BisonTechs Accounting ERP (Web)  
+**App:** FastNxt Accounting ERP (Web)  
 **Audience:** Business owners, accountants, warehouse staff, sales & purchase teams
 
 ---
@@ -1125,4 +1125,4 @@ Exceptions: `Paused` (Hold), `Cancelled`
 
 ---
 
-*Document maintained for BisonTechs ERP. For support: `/support` screen or your system administrator.*
+*Document maintained for FastNxt ERP. For support: `/support` screen or your system administrator.*

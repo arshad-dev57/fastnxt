@@ -1,6 +1,6 @@
-# Bisonstechs ERP - AI Task List
+# FastNxt ERP - AI Task List
 
-This document maintains a persistent task list for AI agents working on the Bisonstechs ERP project.
+This document maintains a persistent task list for AI agents working on the FastNxt ERP project.
 
 ## Critical
 

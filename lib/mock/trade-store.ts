@@ -80,7 +80,7 @@ import {
   type TradingPurchaseReturn,
 } from './trade-data';
 
-const STORAGE_KEY = 'bisonstechs_trade_store_v3';
+const STORAGE_KEY = 'fastnxt_trade_store_v3';
 
 interface TradeStoreState {
   suppliers: TradeSupplier[];

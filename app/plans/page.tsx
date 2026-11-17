@@ -32,8 +32,8 @@ import {
 } from '../../lib/subscription-pricing';
 
 const CUSTOM_CONTACT_EMAIL = 'info@fastnxt.com';
-const CUSTOM_CONTACT_PHONE = '+92 325 3411482';
-const CUSTOM_CONTACT_PHONE_TEL = '+923253411482';
+const CUSTOM_CONTACT_PHONE = '03452411323';
+const CUSTOM_CONTACT_PHONE_TEL = '03452411323';
 
 type DisplayPlan = {
   id: 'trial' | 'monthly' | 'yearly' | 'custom';
@@ -980,7 +980,7 @@ export default function PlansPage() {
               <div>
                 <h3 className="text-xl font-semibold text-neutral-950">Custom plan</h3>
                 <p className="mt-1 text-sm text-neutral-500">
-                  Contact BisonsTechs directly — we&apos;ll discuss features and pricing with you.
+                  Contact FastNxt directly — we&apos;ll discuss features and pricing with you.
                 </p>
               </div>
               <button

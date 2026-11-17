@@ -496,7 +496,7 @@ export function SalesDocumentModal({
       {whatsAppOpen ? (
         <WhatsAppShareModal
           document={document}
-          companyName={branding?.companyName?.trim() || 'BisonsTechs'}
+          companyName={branding?.companyName?.trim() || 'FastNxt'}
           generateFiles={generateWhatsAppFiles}
           onClose={() => setWhatsAppOpen(false)}
         />

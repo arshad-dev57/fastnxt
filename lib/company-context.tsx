@@ -11,8 +11,8 @@ import React, {
 import { API_BASE_URL } from '../app/lib/constants';
 
 export const ALL_COMPANIES_VALUE = '__all__';
-export const COMPANY_STORAGE_KEY = 'bisonstechs_active_company_id';
-export const COMPANIES_CACHE_KEY = 'bisonstechs_companies_cache';
+export const COMPANY_STORAGE_KEY = 'fastnxt_active_company_id';
+export const COMPANIES_CACHE_KEY = 'fastnxt_companies_cache';
 
 export type CompanySummary = {
   id: string;

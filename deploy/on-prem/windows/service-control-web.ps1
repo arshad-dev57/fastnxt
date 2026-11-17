@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-  Start, stop, restart, or inspect the Bisonstechs web PM2 process.
+  Start, stop, restart, or inspect the FastNxt web PM2 process.
 
 .PARAMETER Action
   start | stop | restart | status | logs
@@ -16,7 +16,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$AppName = 'bisonstechs-web'
+$AppName = 'fastnxt-web'
 
 $pm2 = Get-Command pm2 -ErrorAction SilentlyContinue
 if (-not $pm2) {
@@ -29,11 +29,11 @@ if (Test-Path (Join-Path $PSScriptRoot 'ecosystem.web.config.cjs')) {
 }
 
 if ($RuntimeRoot) {
-  $env:BISONSTECHS_WEB_RUNTIME = (Resolve-Path $RuntimeRoot).Path
+  $env:FASTNXT_WEB_RUNTIME = (Resolve-Path $RuntimeRoot).Path
 } elseif (Test-Path (Join-Path $PSScriptRoot 'server.js')) {
-  $env:BISONSTECHS_WEB_RUNTIME = $PSScriptRoot
+  $env:FASTNXT_WEB_RUNTIME = $PSScriptRoot
 } elseif (Test-Path (Join-Path $PSScriptRoot 'package\server.js')) {
-  $env:BISONSTECHS_WEB_RUNTIME = Join-Path $PSScriptRoot 'package'
+  $env:FASTNXT_WEB_RUNTIME = Join-Path $PSScriptRoot 'package'
 }
 
 switch ($Action) {

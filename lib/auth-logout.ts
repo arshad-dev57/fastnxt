@@ -14,6 +14,9 @@ export const LOGOUT_STORAGE_KEYS = [
   'user_email',
   'company_name',
   'company_address',
+  'fastnxt_company_branding',
+  'fastnxt_active_company_id',
+  'fastnxt_companies_cache',
   'bisonstechs_company_branding',
   'bisonstechs_active_company_id',
   'bisonstechs_companies_cache',
@@ -44,9 +47,10 @@ function expireCookie(name: string) {
 
   if (isLocal) return;
 
-  const domain =
-    process.env.NEXT_PUBLIC_COOKIE_DOMAIN?.trim() || '.bisonstechs.com';
-  document.cookie = `${name}=; expires=${expires}; Max-Age=0; path=/; domain=${domain}; SameSite=Lax`;
+  const domain = process.env.NEXT_PUBLIC_COOKIE_DOMAIN?.trim();
+  if (domain) {
+    document.cookie = `${name}=; expires=${expires}; Max-Age=0; path=/; domain=${domain}; SameSite=Lax`;
+  }
 }
 
 function loginRedirectUrl(redirectTo: string) {

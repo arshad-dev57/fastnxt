@@ -1,5 +1,5 @@
 // ============================================================================
-// Bisonstechs ERP — Shared Realistic Mock Dataset for Import, Export & Trading
+// FastNxt ERP — Shared Realistic Mock Dataset for Import, Export & Trading
 // Frontend mock book only (localStorage). Module ownership:
 //   Export  → overseas buyers / ESO-* / ESHP-* / EREC-* (Al-Noor, SingaTrade, …)
 //   Trading → domestic/local wholesale / TSO-* / TPO-* (Emirates, Al-Maktoum, …)

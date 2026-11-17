@@ -1,7 +1,7 @@
-# Bisonstechs ERP — Manufacturing Process Flow & Visual Diagrams
+# FastNxt ERP — Manufacturing Process Flow & Visual Diagrams
 
 **Module:** Manufacturing  
-**App:** Bisonstechs ERP  
+**App:** FastNxt ERP  
 **Interactive UI Guide:** Available in app at `/manufacturing/guide`
 
 ---

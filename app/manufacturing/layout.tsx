@@ -18,7 +18,7 @@ import { usePathname } from 'next/navigation';
 import { MfgNavProvider, useMfgNav } from '@/lib/mfg-nav-context';
 import { MfgSidebar } from './nav';
 
-const LAST_WORKSPACE_KEY = 'bisonstechs_mfg_last_workspace';
+const LAST_WORKSPACE_KEY = 'fastnxt_mfg_last_workspace';
 
 function ManufacturingShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

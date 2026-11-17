@@ -137,6 +137,7 @@ export function clearUserFromLocal(): void {
   localStorage.removeItem('user_email');
   localStorage.removeItem('company_name');
   localStorage.removeItem('company_address');
+  localStorage.removeItem('fastnxt_company_branding');
   localStorage.removeItem('bisonstechs_company_branding');
 }
 

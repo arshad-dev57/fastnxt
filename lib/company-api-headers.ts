@@ -1,6 +1,6 @@
 
 
-export const COMPANY_STORAGE_KEY = 'bisonstechs_active_company_id';
+export const COMPANY_STORAGE_KEY = 'fastnxt_active_company_id';
 export function browserCompanyAuthHeaders(
   extra: Record<string, string> = {}
 ): Record<string, string> {

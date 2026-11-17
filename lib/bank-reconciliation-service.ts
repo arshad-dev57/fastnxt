@@ -152,7 +152,7 @@ export const bankReconciliationService = {
     if (typeof window !== 'undefined') {
       const token = localStorage.getItem('auth_token') || '';
       if (token) headers.Authorization = `Bearer ${token}`;
-      const companyId = localStorage.getItem('bisonstechs_active_company_id') || '';
+      const companyId = localStorage.getItem('fastnxt_active_company_id') || '';
       if (companyId) headers['X-Company-Id'] = companyId;
     }
     const httpRes = await fetch('/api/bank-reconciliation/import/preview', {

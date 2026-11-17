@@ -14,7 +14,7 @@ export const APP_NAME = 'FastNxt';
 export const APP_LOGO_FALLBACK = '/fastnxt-logo.png';
 export const APP_TAGLINE = 'COMPLETE BUSINESS MANAGEMENT APP';
 
-const PROFILE_CACHE_KEY = 'bisonstechs_company_branding';
+const PROFILE_CACHE_KEY = 'fastnxt_company_branding';
 const MODULE_SELECTION_HREF = '/dashboard';
 
 export type CompanyBranding = {

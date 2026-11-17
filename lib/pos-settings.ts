@@ -158,7 +158,7 @@ export const DEFAULT_RECEIPT_TEMPLATE: PosReceiptTemplate = {
   receiptNotes: DEFAULT_POS_SETTINGS.receiptNotes,
   copyLabel: 'ORIGINAL CUSTOMER COPY',
   servedByPrefix: 'You were served by',
-  poweredBy: 'Powered by BisonTechs POS',
+  poweredBy: 'Powered by FastNxt POS',
   thermalPaperWidthMm: 80,
 };
 

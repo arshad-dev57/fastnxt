@@ -12,7 +12,7 @@ import {
 import { upgradeSubscription } from '../lib/subscription-service';
 import { SUBSCRIPTION_PURCHASE_UI_ENABLED } from '../lib/subscription-ui';
 
-const SUPPORT_EMAIL = 'info@bisonstechs.com';
+const SUPPORT_EMAIL = 'info@fastnxt.com';
 
 type Props = {
   open: boolean;

@@ -1,8 +1,8 @@
 // lib/auth-cookies.ts
-// Shared cookie options so auth works across bisonstechs.com ↔ app.bisonstechs.com
+// Shared cookie options for FastNxt authentication
 
-export const LOGGED_IN_COOKIE = 'bt_logged_in';
-export const LOGOUT_FLAG_COOKIE = 'bt_logged_out';
+export const LOGGED_IN_COOKIE = 'fn_logged_in';
+export const LOGOUT_FLAG_COOKIE = 'fn_logged_out';
 export const AUTH_TOKEN_MAX_AGE = 7 * 24 * 60 * 60;
 export const REFRESH_TOKEN_MAX_AGE = 30 * 24 * 60 * 60;
 
@@ -38,14 +38,14 @@ function hostMatchesCookieDomain(host: string, domain: string): boolean {
   return h === d || h.endsWith(`.${d}`);
 }
 
-/** Parent domain for cross-subdomain cookies, e.g. ".bisonstechs.com" */
+/** Parent domain for cross-subdomain cookies, e.g. ".fastnxt.com" */
 export function cookieDomain(requestHost?: string): string | undefined {
   // Never attach parent domain on localhost — browsers reject it.
   if (process.env.NODE_ENV !== 'production') return undefined;
   const domain = process.env.COOKIE_DOMAIN?.trim();
   if (!domain) return undefined;
 
-  // Vercel (*.vercel.app) cannot set Domain=.bisonstechs.com — browser drops the cookie,
+  // Vercel (*.vercel.app) cannot set Domain=.fastnxt.com — browser drops the cookie,
   // proxy sees no auth_token, and OTP success redirects back to /login.
   const host = (requestHost || '').split(':')[0].toLowerCase();
   if (host.endsWith('.vercel.app') || host === 'vercel.app') return undefined;
@@ -74,7 +74,7 @@ export function publicAuthCookie(maxAge = AUTH_TOKEN_MAX_AGE, requestHost?: stri
   return { ...authCookieBase(maxAge, requestHost), httpOnly: false as const };
 }
 
-/** Non-sensitive flag readable by marketing site JS on bisonstechs.com */
+/** Non-sensitive flag readable by marketing site JS on fastnxt.com */
 export function loggedInCookieOptions(maxAge = AUTH_TOKEN_MAX_AGE, requestHost?: string) {
   return publicAuthCookie(maxAge, requestHost);
 }

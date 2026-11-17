@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
 
       const requestHost = request.headers.get('host') || '';
 
-      // Host-only cookies on Vercel; .bisonstechs.com only when actually on that domain
+      // Host-only cookies on Vercel; domain cookies only when configured
       if (token) {
         nextResponse.cookies.set(
           'auth_token',

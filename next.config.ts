@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
   generateEtags: false,
 
-  // Compilation speed optimization
   experimental: {
     optimizePackageImports: [
       "lucide-react",
@@ -32,7 +31,6 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Backend API rewrites
   async rewrites() {
     const backendUrl = (
       process.env.API_URL ||
@@ -68,7 +66,6 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Application redirects
   async redirects() {
     return [
       { source: "/import", destination: "/import/dashboard", permanent: false },
@@ -204,7 +201,6 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Response headers
   async headers() {
     if (process.env.NODE_ENV === "development") {
       return [];

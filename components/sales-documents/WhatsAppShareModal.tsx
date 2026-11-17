@@ -52,7 +52,7 @@ export function WhatsAppShareModal({
       customerName: document.party.name || 'Customer',
       number: document.number,
       grandTotalLabel: formatAmount(grandTotalOf(document)),
-      companyName: companyName || 'BisonsTechs',
+      companyName: companyName || 'FastNxt',
     })
   );
   const [sending, setSending] = useState(false);

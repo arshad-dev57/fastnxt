@@ -3,8 +3,8 @@ export type CompanyBranding = {
   organizationName: string;
 };
 
-const PROFILE_SESSION_KEY = 'bisonstechs_profile_session';
-const PROFILE_SESSION_TS_KEY = 'bisonstechs_profile_session_ts';
+const PROFILE_SESSION_KEY = 'fastnxt_profile_session';
+const PROFILE_SESSION_TS_KEY = 'fastnxt_profile_session_ts';
 const PROFILE_TTL_MS = 5 * 60 * 1000;
 
 let inflight: Promise<Record<string, unknown> | null> | null = null;
@@ -59,7 +59,7 @@ export function profileToBranding(profile: Record<string, unknown> | null): Comp
   }
   const businessDetails = profile.businessDetails as { logo?: string } | undefined;
   return {
-    // Prefer company logo only — do not force static BisonsTechs fallback
+    // Prefer company logo only — do not force static FastNxt fallback
     logo: businessDetails?.logo || '',
     organizationName: (profile.organizationName as string) || '',
   };

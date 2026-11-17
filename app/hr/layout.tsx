@@ -17,7 +17,7 @@ import { useSidebarCollapsed } from '../../lib/sidebar-collapse';
 import { HrNavProvider, useHrNav } from '@/lib/hr-nav-context';
 import { HrWorkspaceSidebar } from './components/hr-workspace-sidebar';
 
-const LAST_WORKSPACE_KEY = 'bisonstechs_hr_last_workspace';
+const LAST_WORKSPACE_KEY = 'fastnxt_hr_last_workspace';
 
 function HRSidebar({ workspaceSlug }: { workspaceSlug: string }) {
   const { collapsed } = useSidebarCollapsed();

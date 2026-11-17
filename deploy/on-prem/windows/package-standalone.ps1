@@ -37,7 +37,7 @@ if (-not $OutputDir) {
 
 $standaloneSrc = Join-Path $WebRoot '.next\standalone'
 
-Write-Host 'Bisonstechs — Package standalone web runtime' -ForegroundColor Green
+Write-Host 'FastNxt — Package standalone web runtime' -ForegroundColor Green
 
 if (-not (Test-Path (Join-Path $standaloneSrc 'server.js'))) {
   throw "Standalone build not found. Run build-production.ps1 first."
@@ -75,7 +75,7 @@ Package ready: $OutputDir
 Deliver this folder to the client (zip/USB). It does NOT include source code or .git.
 
 On client server:
-  1. Copy folder to e.g. C:\Bisonstechs\web\
+  1. Copy folder to e.g. C:\FastNxt\web\
   2. Ensure .env exists (from .env.example)
   3. Run install-web-service.ps1 as Administrator
 "@ -ForegroundColor Green

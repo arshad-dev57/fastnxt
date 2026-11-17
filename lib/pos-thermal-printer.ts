@@ -513,7 +513,7 @@ export async function printTestThermalPage() {
   b.line('DARK TEXT CHECK');
   b.bold(false);
   b.line(dashLine(cols));
-  b.line('BisonTechs POS');
+  b.line('FastNxt POS');
   b.line(`${tpl.thermalPaperWidthMm || 80}mm thermal`);
   b.line(new Date().toLocaleString());
   b.line(dashLine(cols));

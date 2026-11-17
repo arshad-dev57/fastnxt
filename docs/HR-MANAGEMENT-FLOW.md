@@ -1,6 +1,6 @@
-# Bisonstechs ERP — HR Management Flow (AI Knowledge File)
+# FastNxt ERP — HR Management Flow (AI Knowledge File)
 
-**App:** Bisonstechs ERP (Web)  
+**App:** FastNxt ERP (Web)  
 **Module:** HR Management  
 **Open from:** Main Dashboard → HR Management  
 **Base URL:** `/hr/...`  
@@ -15,7 +15,7 @@ Yeh file **complete HR module** ka source of truth hai. Isko kisi AI ko paste ka
 Neeche wala prompt copy karo, phir is poori file ke baad paste karo:
 
 ```
-You are my Bisonstechs ERP HR Management teacher.
+You are my FastNxt ERP HR Management teacher.
 
 Use ONLY the document I pasted. Do not invent screens, buttons, fields, or statuses that are not in the document.
 

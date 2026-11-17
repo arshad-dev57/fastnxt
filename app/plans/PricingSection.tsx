@@ -394,22 +394,22 @@ export default function PricingSection({
       <div className="mt-6 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 text-center">
         <p className="text-sm font-semibold text-neutral-800">Need a custom plan?</p>
         <p className="mt-1 text-sm text-neutral-500">
-          Contact BisonsTechs directly — we&apos;ll discuss features and pricing.
+          Contact FastNxt directly — we&apos;ll discuss features and pricing.
         </p>
         <div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-semibold">
           <a
-            href="mailto:info@bisonstechs.com"
+            href="mailto:info@fastnxt.com"
             className="hover:underline"
             style={{ color: BRAND }}
           >
-            info@bisonstechs.com
+            info@fastnxt.com
           </a>
           <a
-            href="tel:+923253411482"
+            href="tel:03452411323"
             className="hover:underline"
             style={{ color: BRAND }}
           >
-            +92 325 3411482
+            03452411323
           </a>
         </div>
       </div>
