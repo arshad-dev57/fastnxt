@@ -2,7 +2,7 @@
  * Desktop POS installer URLs for web download buttons.
  *
  * Installers are the current fastnxt_desktop_pos GitHub Release (not accounting-desktop):
- *   NEXT_PUBLIC_POS_DESKTOP_VERSION=1.0.0
+ *   NEXT_PUBLIC_POS_DESKTOP_VERSION=1.0.1
  *   NEXT_PUBLIC_POS_DESKTOP_GITHUB_REPO=arshad-dev57/fastnxt_desktop_pos
  *
  * Optional overrides (full URL each). Links to accounting-desktop / Bisonstechs
@@ -14,7 +14,7 @@
  */
 
 const POS_PRODUCT_FILENAME = 'FastNxt POS';
-const DEFAULT_POS_DESKTOP_VERSION = '1.0.0';
+const DEFAULT_POS_DESKTOP_VERSION = '1.0.1';
 const DEFAULT_POS_DESKTOP_GITHUB_REPO = 'arshad-dev57/fastnxt_desktop_pos';
 
 export type DesktopOsHint = 'mac' | 'macIntel' | 'win' | 'other';
