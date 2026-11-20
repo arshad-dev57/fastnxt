@@ -1,21 +1,21 @@
 /**
  * Desktop POS installer URLs for web download buttons.
  *
- * Recommended production setup (installers on GitHub Releases, not in git/Vercel):
+ * Installers are the current fastnxt_desktop_pos GitHub Release (not accounting-desktop):
  *   NEXT_PUBLIC_POS_DESKTOP_VERSION=1.0.0
- *   NEXT_PUBLIC_POS_DESKTOP_GITHUB_REPO=owner/accounting-desktop
+ *   NEXT_PUBLIC_POS_DESKTOP_GITHUB_REPO=arshad-dev57/fastnxt_desktop_pos
  *
- * Optional overrides (full URL each):
+ * Optional overrides (full URL each). Links to accounting-desktop / Bisonstechs
+ * are ignored so the site keeps serving FastNxt POS.
  *   NEXT_PUBLIC_DESKTOP_DOWNLOAD_URL  — fallback / any OS
  *   NEXT_PUBLIC_DESKTOP_DOWNLOAD_MAC  — Apple Silicon .dmg
  *   NEXT_PUBLIC_DESKTOP_DOWNLOAD_MAC_INTEL — Intel Mac .dmg
  *   NEXT_PUBLIC_DESKTOP_DOWNLOAD_WIN  — Windows .exe
- *
- * Legacy server paths (self-hosted file on disk):
- *   DESKTOP_APP_MAC_PATH / DESKTOP_APP_WIN_PATH with `/api/download/desktop?platform=...`
  */
 
 const POS_PRODUCT_FILENAME = 'FastNxt POS';
+const DEFAULT_POS_DESKTOP_VERSION = '1.0.0';
+const DEFAULT_POS_DESKTOP_GITHUB_REPO = 'arshad-dev57/fastnxt_desktop_pos';
 
 export type DesktopOsHint = 'mac' | 'macIntel' | 'win' | 'other';
 
@@ -38,10 +38,18 @@ function trimEnv(v?: string): string | null {
   return s || null;
 }
 
+function isLegacyBisonValue(value: string | null | undefined): boolean {
+  return /accounting-desktop|bisonstechs/i.test(String(value || ''));
+}
+
 export function getPosDesktopVersion(): string | null {
+  if (isLegacyBisonValue(process.env.NEXT_PUBLIC_POS_DESKTOP_GITHUB_REPO)) {
+    return DEFAULT_POS_DESKTOP_VERSION;
+  }
   return (
     trimEnv(process.env.NEXT_PUBLIC_POS_DESKTOP_VERSION) ||
-    trimEnv(process.env.NEXT_PUBLIC_DESKTOP_APP_VERSION)
+    trimEnv(process.env.NEXT_PUBLIC_DESKTOP_APP_VERSION) ||
+    DEFAULT_POS_DESKTOP_VERSION
   );
 }
 
@@ -60,14 +68,24 @@ function artifactFilename(version: string, os: string, arch: string, ext: string
   return `${POS_PRODUCT_FILENAME}-${v}-${os}-${arch}.${ext}`;
 }
 
+function fastnxtDownloadUrl(url: string | null | undefined): string | null {
+  const value = trimEnv(url || undefined);
+  if (!value || isLegacyBisonValue(value)) return null;
+  return value;
+}
+
 function resolveGithubUrls(): {
   mac: string | null;
   macIntel: string | null;
   win: string | null;
 } {
-  const repo = trimEnv(process.env.NEXT_PUBLIC_POS_DESKTOP_GITHUB_REPO);
+  const configured = trimEnv(process.env.NEXT_PUBLIC_POS_DESKTOP_GITHUB_REPO);
+  const repo =
+    !configured || isLegacyBisonValue(configured)
+      ? DEFAULT_POS_DESKTOP_GITHUB_REPO
+      : configured;
   const version = getPosDesktopVersion();
-  if (!repo || !version) {
+  if (!version) {
     return { mac: null, macIntel: null, win: null };
   }
   const tag = releaseTag(version);
@@ -99,8 +117,8 @@ export function getDesktopDownloadUrl(): string | null {
         : null;
   if (pick?.url) return pick.url;
   const fallback =
-    trimEnv(process.env.NEXT_PUBLIC_DESKTOP_DOWNLOAD_URL) ||
-    trimEnv(process.env.NEXT_DESKTOP_DOWNLOAD_URL);
+    fastnxtDownloadUrl(process.env.NEXT_PUBLIC_DESKTOP_DOWNLOAD_URL) ||
+    fastnxtDownloadUrl(process.env.NEXT_DESKTOP_DOWNLOAD_URL);
   return fallback || model.cards.find((c) => c.url)?.url || null;
 }
 
@@ -114,16 +132,16 @@ export function getDesktopDownloadPageModel(): DesktopDownloadPageModel {
   const gh = resolveGithubUrls();
 
   const mac =
-    trimEnv(process.env.NEXT_PUBLIC_DESKTOP_DOWNLOAD_MAC) ||
-    trimEnv(process.env.NEXT_DESKTOP_DOWNLOAD_MAC) ||
+    fastnxtDownloadUrl(process.env.NEXT_PUBLIC_DESKTOP_DOWNLOAD_MAC) ||
+    fastnxtDownloadUrl(process.env.NEXT_DESKTOP_DOWNLOAD_MAC) ||
     gh.mac;
   const macIntel =
-    trimEnv(process.env.NEXT_PUBLIC_DESKTOP_DOWNLOAD_MAC_INTEL) ||
-    trimEnv(process.env.NEXT_DESKTOP_DOWNLOAD_MAC_INTEL) ||
+    fastnxtDownloadUrl(process.env.NEXT_PUBLIC_DESKTOP_DOWNLOAD_MAC_INTEL) ||
+    fastnxtDownloadUrl(process.env.NEXT_DESKTOP_DOWNLOAD_MAC_INTEL) ||
     gh.macIntel;
   const win =
-    trimEnv(process.env.NEXT_PUBLIC_DESKTOP_DOWNLOAD_WIN) ||
-    trimEnv(process.env.NEXT_DESKTOP_DOWNLOAD_WIN) ||
+    fastnxtDownloadUrl(process.env.NEXT_PUBLIC_DESKTOP_DOWNLOAD_WIN) ||
+    fastnxtDownloadUrl(process.env.NEXT_DESKTOP_DOWNLOAD_WIN) ||
     gh.win;
 
   const cards: DesktopDownloadCard[] = [
